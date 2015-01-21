@@ -8,6 +8,7 @@
 # arithmetic2(19, 10)  # => 5.0
 # arithmetic2(-6, -7)  # => -3.5
 
+# First time I have used a ternary operator!
 def arithmetic2(a, b)
   arithmetic2 = a < b ? a / 2.0 : b / 2.0
 end
