@@ -1,3 +1,5 @@
+#Watch this video - https://vimeo.com/24673123 - these notes are supplementary as per the last section
+
 # Symbols look like this:
 :this_is_a_symbol       # => :this_is_a_symbol
 :this_is_a_symbol.class # => Symbol

@@ -1,3 +1,5 @@
+#Watch this video - https://vimeo.com/25814869 - these notes are supplementary as per the last section
+
 # Every building in America has an address so you can send letters
 # to people who live there. In the same way, every computer on the
 # internet has an address so you can send data to programs that

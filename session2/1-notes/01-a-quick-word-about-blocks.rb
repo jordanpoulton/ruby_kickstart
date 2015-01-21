@@ -1,3 +1,5 @@
+#Watch this video - https://vimeo.com/24365612 - these notes are supplementary as per the last section
+
 # We'll talk about blocks more later, but for now just know
 # that you declare a parameter in pipes (this is just
 # like a method declaring parameters)

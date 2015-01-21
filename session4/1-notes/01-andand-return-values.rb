@@ -1,3 +1,5 @@
+#Watch this video - https://vimeo.com/24716767 and then this one https://vimeo.com/24972005 - these notes are supplementary to the 2nd video as per the last section
+
 # Remember, everything in Ruby is true except for false and nil.
 # This means that (1 && 5) returning 5 works just as well
 # as if it had returned true. And in fact, that's what it does

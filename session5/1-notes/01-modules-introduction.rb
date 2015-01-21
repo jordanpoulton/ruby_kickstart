@@ -1,3 +1,5 @@
+#Watch this video - https://vimeo.com/25294157 - these notes are supplementary as per the last section
+
 # Modules are just like classes in that they contain methods. But
 # unlike classes, you can't instantiate them. Instead, we include
 # their methods in some other class, and then its instances get
