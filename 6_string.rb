@@ -31,5 +31,6 @@ def odds_and_evens(string, return_odds)
 
     return_letters
     end
+    
 end
 
