@@ -16,11 +16,18 @@
 #
 
 class Person
-def initialize(name, age)
+	attr_accessor 'name', 'age' #allows the objects attribute to bet returned and updated.
+	def initialize(name, age)#values set up when the object is first created.
 		@name = name
 		@age = age
-		
+	end	
+	def birthday
+		@age = age + 1
 	end
-	attr_accessor 'name', 'age'
 	
 end
+
+#jim = Person.new('jim', 45)
+#puts jim.age
+#jim.birthday
+#puts jim.age
