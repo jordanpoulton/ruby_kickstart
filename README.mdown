@@ -14,12 +14,16 @@ The course consists of six sessions, all of which have common features:
 
   **Notes**
   ---------
-  Each session has a set of notes files, which are just simple Ruby programs that are heavily commented to walk through the material of that session. This is the material that we go through for each session. You should go through this section first, and the first item in each section has a link to a video that you should watch. The notes are synched with the videos - try to keep up, and add your own notes for clarification wherever you need it.
+  Each session has a set of notes files, which are just simple Ruby programs that are heavily commented to walk you through the material of that session. You should go through this section first.
+
+  The first item in each section has a link to a video that you should watch as you go along. The notes are synched with the videos - try to keep up, and add your own notes for clarification wherever you need it.
 
   **Examples**
   ------------
-  Existence of examples is intermittent. They are full Ruby programs that demonstrate the material taught in the notes.
-  You can run them on your own and modify them to experiment with the ideas they demonstrate.
+  Examples are sparse, to say the least. They're full Ruby programs that demonstrate the material taught in the notes.
+
+  You can run them on your own machine, and modify them to experiment with the ideas they demonstrate.
+
   Once you've gone through the notes for a section, have a look and a play with the examples to check you fully understand what's going on.
 
   *PLEASE BE ENCOURAGED TO ADD AS MANY EXAMPLES AS YOU CAN AND MAKE A PULL REQUEST!!*
@@ -32,7 +36,7 @@ The course consists of six sessions, all of which have common features:
 
   The rest were spawned out of the brain of Mr Peek himsef.
 
-  Don't forget to run "rack session_number:challenge_number" as you go along for feedback on whether your solutions are right, and once you've got all your tests passing, you can compare your solution to the solutions in the 'solved' section (next)
+  Don't forget to run "rack session_number:challenge_number" as you go along for feedback on whether your solutions are correct, and once you've got all your tests passing, you can compare your solution to the solutions in the 'solved' section (next)
 
   If you have suggestions for further challenges, please create them and MAKE A PULL REQUEST!! :)
 
@@ -41,6 +45,8 @@ The course consists of six sessions, all of which have common features:
   Along with challenges, each session provides solutions to its challenges and
   a suite of automated tests you can use to test the correctness of your solutions.
 
+  Feel free to add your own alternative/improved solutions in this section and make a pull request to me. It would be cool to have dozens of solutions in every section so people can analyze all the different ways you can solve a problem and learn from them.
+
   **Cheatsheets**
   ---------------
   Although not part of the sessions, RubyKickstart has a number of cheatsheets which contain all the syntax for various topics. Some of the material in the cheatsheets is not covered in the notes or examples for sessions, so make sure you check out the cheatsheets before diving into the challenges.
@@ -48,7 +54,7 @@ The course consists of six sessions, all of which have common features:
   It might also be worth printing out the cheatsheets and sticking them on your wall, or turning them into Anki / Memrise / Quizlet decks - if you do this, be sure to share the link with us so we can let all our students use them!
 
 
-Sessions
+Sessions Overview
 ========
 
 - 1
@@ -103,14 +109,12 @@ What you'll need to use it
 Age
 ===
 
-This is several years old now, but I updated it to RSpec 3 and cleaned it up a lot
+This is several years old now, but it was updated to RSpec 3 and cleaned it up a lot
 in December 2014. Everything should still work fine and be applicable.
 
 There is now a Gemfile in the root, you can ignore it, it's mostly for letting me
 know what versions I last checked it against.
 
-The website is down now b/c Heroku changed since I made this. I'll hopefully get
-it up again, but IDK how much work it's going to take, so it might not happen.
 
 Quizzes
 ===
