@@ -6,15 +6,6 @@
 #
 
 def odds_and_evens(string, return_odds)
-  to_return = ""
-  string.chars.each_with_index do |char, index|
-    if return_odds
-      index % 2 != 0 ? to_return << char : next
-    else
-      index % 2 == 0 ? to_return << char : next
-    end
-  end
-  to_return
 end
 
 #This can definitely be refactored!!
