@@ -4,3 +4,11 @@ def got_three?(elements)
   end
   false
 end
+
+#Solved by meads
+def got_three? arr
+	arr.each_cons(3){|x| 
+		return true if x.uniq.length == 1}
+	false
+end
+#=====================
