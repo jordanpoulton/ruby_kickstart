@@ -6,6 +6,20 @@
 #
 
 def odds_and_evens(string, return_odds)
+  x = String.new
+  
+  	if return_odds == true
+  		string.length.times do |index|
+    next if index.even? == true
+     x << string[index]
+ end
+else
+	string.length.times do |index|
+    next if index.odd? == true
+    x << string[index]
+  end
+end
+  x
 end
 
 #This can definitely be refactored!!
