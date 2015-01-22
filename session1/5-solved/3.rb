@@ -1,5 +1,4 @@
 #paul fitz
-
 def ten_twenty(n)
 	if n % 2 == 0
 		10

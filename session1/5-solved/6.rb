@@ -1,7 +1,5 @@
 #paul fitz
-
 def odds_and_evens(string, return_odds)
-	
 	answer = ""
 	
 	string.length.times do |i|
@@ -13,7 +11,7 @@ def odds_and_evens(string, return_odds)
 	end
 answer
 end
-puts odds_and_evens("paul", true)
+
 
 
 def odds_and_evens(string, return_odds)

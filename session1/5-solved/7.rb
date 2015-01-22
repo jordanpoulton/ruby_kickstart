@@ -1,5 +1,4 @@
 #paul fitz
-
 def pirates_say_arrrrrrrrr(string)
 	answer = ""
 	string.length.times do |i|
