@@ -1,9 +1,6 @@
-def arithmetic1(n)
-  n * 5 - 20
-end
+#paul fitz
 
-#Jordan
 def arithmetic1(n)
-  (n * 5) - 20
-end
+	(n*5)-20
 
+end

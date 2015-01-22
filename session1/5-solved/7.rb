@@ -1,3 +1,16 @@
+#paul fitz
+
+def pirates_say_arrrrrrrrr(string)
+	answer = ""
+	string.length.times do |i|
+		 string[i]
+		 if string[i] == "r" || string [i] == "R"
+		 	answer << string[i + 1]
+		 end
+		end
+	answer
+end
+
 def pirates_say_arrrrrrrrr(string)
   to_return = ""
   add_next = false
