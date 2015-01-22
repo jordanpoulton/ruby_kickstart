@@ -24,14 +24,7 @@
 # USER:     BYE
 
 def deaf_grandma
-	while line = gets.chomp
-		break if line == 'BYE'
-		if line == line.upcase && line.empty? == false #logic is that if inptu is not empty and upcase
-			puts 'NO, NOT SINCE 1938!'
-		else
-			puts 'HUH?! SPEAK UP, SONNY!' #all other cases, inlcuding a blank line do this.
-		end
-	end	
+
 end
 
 

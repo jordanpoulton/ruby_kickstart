@@ -5,3 +5,13 @@ def ten_twenty(n)
     20
   end
 end
+
+#Solved by Meads
+def ten_twenty(n)
+  if n.even? == true
+  	return 10
+  else
+  	return 20
+  end
+end
+#==================

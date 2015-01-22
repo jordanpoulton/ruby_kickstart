@@ -18,27 +18,3 @@
 # if the parameter is greater than 99, set the number of beer bottles to 99
 # Then make a public method called print_song that outputs all stanzas from the number of bottles of beer down to zero.
 # Add any additional methods you find helpful.
-
-class BeerSong
-	def initialize bottles
-		if bottles < 0 then 
-			@bottles = 0
-		elsif bottles > 99 then
-			@bottles = 99
-		else
-			@bottles = bottles
-		end
-			@ones = ['zero','one', 'two','three','four','five','six','seven','eight','nine']
-	end
-	
-	def print_song
-		@bottles.downto(0).each do |x|
-				puts "#{@ones[x]} bottles of beer on the wall"	
-		end
-		
-	end	
-end
-
-	sing = BeerSong.new 0
-	puts sing.print_song
-	

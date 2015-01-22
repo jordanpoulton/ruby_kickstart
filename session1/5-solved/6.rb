@@ -7,3 +7,19 @@ def odds_and_evens(string, return_odds)
   end
   to_return
 end
+
+#Solved by meads
+def odds_and_evens(string, return_odds)
+	result = String.new
+		if return_odds == true
+			(1...string.length).step(2) do |index|
+				result << string[index]
+			end
+		else
+			(0...string.length).step(2) do |index|
+				result << string[index]
+			end
+		end
+	result		
+end
+#===========================

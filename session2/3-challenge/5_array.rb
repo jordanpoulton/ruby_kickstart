@@ -13,25 +13,3 @@
 # mod_three [7]  # => [1]
 #
 # mod_three [0,1,2,3,4,5,6,7] # => [1, 2, 1, 2, 1]
-
-#second attmpt using the select method to only filter out values
-
-def mod_three arr
-	arr.select {|val| val % 3 != 0}.map {|val| val % 3 }
-	#take the array and filter it with select to only include nothing divisible by 3. 
-	#Next use map(which returns a the new array) to return mod of 3 applied to the filtered hash.
-end	
-
-=begin
-#first attempt
-def mod_three arr
-	result = []
-	arr.each do |val| 
-		if val % 3  != 0
-			result << val % 3 
-		end
-	end
-	return result
-end
-=end
-#puts mod_three [4, 5, 6]
