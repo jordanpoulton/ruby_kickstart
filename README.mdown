@@ -40,7 +40,7 @@ The course consists of six sessions, all of which have common features:
 
   If you have suggestions for further challenges, please create them and MAKE A PULL REQUEST!! :)
 
-  FYI - when you solve a challenge, please move your solution into the relevant file in the 'solved' directory and make a pull request. I would like to keep the challenges empty so future students don't immediately see the solutions... And remember to do 'git pull' before you add your solution, so I don't have to spend my life fixing merge conflicts :)
+  FYI - when you solve a challenge, please *move* your solution into the relevant file in the 'solved' directory and make a pull request. I would like to keep the challenges empty so future students don't immediately see the solutions... And remember to do 'git pull' before you add your solution, so I don't have to spend my life fixing merge conflicts :)
 
   **Solved & Specs**
   -------------------
