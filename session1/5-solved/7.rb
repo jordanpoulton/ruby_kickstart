@@ -14,10 +14,22 @@ def pirates_say_arrrrrrrrr(string)
 	result = ""
 	len = string.size - 1
 	len.times do |index|
-		if string[index] == "r" || string[index] == "R" 
+		if string[index] == "r" || string[index] == "R"
 			result << string[index + 1]
 		end
 	end
 	result
 end
 #================================
+
+#paul fitz
+def pirates_say_arrrrrrrrr(string)
+  answer = ""
+  string.length.times do |i|
+     string[i]
+     if string[i] == "r" || string [i] == "R"
+      answer << string[i + 1]
+     end
+    end
+  answer
+end

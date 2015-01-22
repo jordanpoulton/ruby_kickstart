@@ -20,6 +20,20 @@ def odds_and_evens(string, return_odds)
 				result << string[index]
 			end
 		end
-	result		
+	result
 end
 #===========================
+
+#paul fitz
+def odds_and_evens(string, return_odds)
+  answer = ""
+
+  string.length.times do |i|
+    next if return_odds && i.even?
+    next if !return_odds && i.odd?
+
+
+    answer << string[i]
+  end
+answer
+end
