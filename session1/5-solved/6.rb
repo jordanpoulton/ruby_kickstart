@@ -35,3 +35,27 @@ def odds_and_evens(string, return_odds)
   end
 answer
 end
+
+#Sebastien
+def odds_and_evens(string, return_odds)
+  newString = String.new
+  puts newString
+  stringArray = string.split(//)
+  if return_odds == true
+    stringArray.each_with_index do |v,k|
+      if k%2!=0
+        newString<<v
+      end
+        
+      end
+    else
+      stringArray.each_with_index do |v,k|
+        if k%2==0
+          newString<<v
+        end
+          
+        end
+    
+  end
+  return newString
+end
