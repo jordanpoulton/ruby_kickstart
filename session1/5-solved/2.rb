@@ -6,6 +6,12 @@ def arithmetic2(a, b)
   end
 end
 
+#Jordan
+def arithmetic2(a, b)
+  a < b ? a / 2.0 : b / 2.0
+end
+
+
 #Solved by meads
 def arithmetic2(a, b)
 	if a < b == true
@@ -15,3 +21,6 @@ def arithmetic2(a, b)
 	end
 end
 #===================
+
+
+
