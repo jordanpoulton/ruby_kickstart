@@ -31,7 +31,6 @@ def grade(num_books, reads_books)
 		end
 	end
 end
-#=======================
 
 #paul fitz
 def grade(num_books, reads_books)
@@ -45,3 +44,24 @@ def grade(num_books, reads_books)
     return "B"
   end
 end
+
+#Costas
+def grade(num_books, has_read_books)
+  if has_read_books == false
+  if num_books <10
+    'D'
+  elsif num_books <=20
+    'C'
+  else
+    'B'
+  end
+
+  elsif num_books <10
+    'C'
+  elsif num_books <=20
+    'B'
+  else
+    'A'
+  end
+end
+#=======================

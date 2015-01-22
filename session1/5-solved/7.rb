@@ -33,3 +33,14 @@ def pirates_say_arrrrrrrrr(string)
     end
   answer
 end
+
+#Costas
+def pirates_say_arrrrrrrrr(string)
+  x=String.new
+  (string.length - 1).times do |index|
+    if string[index] == "r" || string[index] == "R"
+    x << string[index+1]
+  end
+end
+  x
+end

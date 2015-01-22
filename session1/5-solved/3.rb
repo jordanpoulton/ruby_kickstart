@@ -21,5 +21,14 @@ def ten_twenty(n)
   	return 20
   end
 end
+
+#Costas
+def ten_twenty(n)
+  if n.even? == true
+    10
+  else
+    20
+  end
+end
 #==================
 
