@@ -33,3 +33,15 @@ def pirates_say_arrrrrrrrr(string)
     end
   answer
 end
+
+#Sebastien
+def pirates_say_arrrrrrrrr(string)
+  return_letter = ""
+  add_next_letter = false
+  string.size.times do |x|
+    current_letter = string[x,1] 
+    return_letter << current_letter if add_next_letter
+    add_next_letter = (current_letter == "r" || current_letter == "R")
+  end
+  return_letter
+end
