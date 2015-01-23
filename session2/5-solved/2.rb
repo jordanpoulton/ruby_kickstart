@@ -33,10 +33,21 @@ def hi_hi_goodbye
   while input = gets
     puts "hi " * input.to_i
     break if input == "bye"
-    
+
   end
- puts "goodbye" 
+ puts "goodbye"
 end
+
+def hi_hi_goodbye
+  puts "Please enter a number: "
+  while num = gets.chomp # Can't add .to_i here as it affects the input "bye"
+  num.to_i.times { |n| puts "hi " } # Input to integer
+    puts " "
+    break if num == "bye"
+  end
+  puts "goodbye"
+end
+
 
 
 hi_hi_goodbye if $0 == __FILE__  # a little magic so that you can run with "$ ruby 2_input_output_control.rb" but it will still work for our tests
