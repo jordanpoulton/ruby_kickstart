@@ -71,3 +71,15 @@ def pirates_say_arrrrrrrrr(string)
   end 
     returnString
 end
+
+#Yannick
+def pirates_say_arrrrrrrrr(string)
+  answer = ""
+  cycles = string.size - 1
+  cycles.times do |x|
+    if string[x] == "r" || string[x] == "R"
+    answer << string[x + 1]
+    end
+  end
+answer
+end

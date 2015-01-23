@@ -50,3 +50,9 @@ def ten_twenty(n)
   #What if n is 0?!
 end
 
+#Yannick
+def ten_twenty(n)
+
+  n % 2 == 0 ? 10 : 20
+
+end
