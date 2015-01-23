@@ -43,4 +43,11 @@ def arithmetic2(a, b)
 end
 
 
-
+#solved by loris
+def arithmetic2(a, b)
+  if a < b
+    return a / 2.0
+  else
+    return b / 2.0
+  end
+end

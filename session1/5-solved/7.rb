@@ -22,6 +22,7 @@ def pirates_say_arrrrrrrrr(string)
 end
 #================================
 
+
 #paul fitz
 def pirates_say_arrrrrrrrr(string)
   answer = ""
@@ -40,9 +41,10 @@ def pirates_say_arrrrrrrrr(string)
   (string.length - 1).times do |index|
     if string[index] == "r" || string[index] == "R"
     x << string[index+1]
+    end
   end
-end
   x
+end
 
 #Sebastien
 def pirates_say_arrrrrrrrr(string)
@@ -54,4 +56,17 @@ def pirates_say_arrrrrrrrr(string)
     add_next_letter = (current_letter == "r" || current_letter == "R")
   end
   return_letter
+end
+
+#solved by loris
+def pirates_say_arrrrrrrrr(string)
+  newString = String.new
+  stringArray = string.split(//)
+  s_length = stringArray.length
+  stringArray.each_with_index do |x, y|
+    if x == "r" || "R" && y!= s_length-1
+    newString << stringArray[y+1]
+    end
+  end
+  return newString
 end
