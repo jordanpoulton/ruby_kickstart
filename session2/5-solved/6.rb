@@ -24,3 +24,16 @@ def prime_chars? arr
 	return  true
 end
 #=========================================
+
+#Sebastien
+def is_prime?(number)
+  return false if number < 2
+  (2..Math.sqrt(number)).each do |a| 
+    return false if number %a==0
+  end
+    true
+end
+
+def prime_chars?(car)
+  is_prime? car.join.length
+end
