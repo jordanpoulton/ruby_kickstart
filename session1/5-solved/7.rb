@@ -21,3 +21,16 @@ def pirates_say_arrrrrrrrr(string)
 	result
 end
 #================================
+
+#solved by loris
+def pirates_say_arrrrrrrrr(string)
+  newString = String.new
+  stringArray = string.split(//)
+  s_length = stringArray.length
+  stringArray.each_with_index do |x, y|
+    if x == "r" || "R" && y!= s_length-1
+    newString << stringArray[y+1]
+    end
+  end
+  return newString
+end
