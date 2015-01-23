@@ -21,13 +21,14 @@
 #kevin lanzon
 def hi_hi_goodbye
   puts "Please enter a number: "
-  while num = gets.chomp # Cant add .to_i here as it effects the input "bye"
-  num.to_i.times { |n| puts "hi " }
+  while num = gets.chomp # Can't add .to_i here as it affects the input "bye"
+  num.to_i.times { |n| puts "hi " } # Input to integer
     puts " "
     break if num == "bye"
   end
   puts "goodbye"
 end
+
 
 
 
