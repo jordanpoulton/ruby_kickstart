@@ -23,3 +23,12 @@ def ten_twenty(n)
 end
 #==================
 
+#Sebastien
+def ten_twenty(n)
+  if n % 2 == 0
+    return 10
+  else
+    return 20
+  end
+end
+
