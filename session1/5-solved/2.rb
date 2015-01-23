@@ -52,4 +52,8 @@ def arithmetic2(a, b)
   #What if the numbers are equal?!
 end
 
+#Yannick
+def arithmetic2(a, b)
+	([a,b].min)*0.5.to_f
+end
 

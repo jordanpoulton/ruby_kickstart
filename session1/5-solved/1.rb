@@ -33,3 +33,8 @@ end
 def arithmetic1(n)
   (n * 5) - 20
 end
+
+#Yannick
+def arithmetic1(n)
+  (n * 5) - 20
+end

@@ -98,3 +98,16 @@ def odds_and_evens(string, return_odds)
   end
   returnString
 end
+
+#Yannick
+def odds_and_evens(string, return_odds)
+  finish_array = ""
+  if return_odds
+    string.split("").each {|x| x.to_i % 2 != 0 ? finish_array << x : nil}
+  else
+    string.split("").each {|x| x.to_i % 2 == 0 ? finish_array << x : nil}
+  end
+finish_array
+end
+
+
