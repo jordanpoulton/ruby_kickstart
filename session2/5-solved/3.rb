@@ -23,3 +23,14 @@ class String
 	end	
 end
 #=========================================
+
+#Sebastien
+class String
+  def every_other_char
+    other_char = ''
+    each_char.with_index do |char, c|
+      other_char << char if c.even?
+    end
+    other_char
+  end
+end
