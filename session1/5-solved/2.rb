@@ -42,6 +42,15 @@ def arithmetic2(a, b)
 	end
 end
 
+#Phil
+def arithmetic2(a, b)
+  if a < b
+    a / 2.0
+  else a > b
+    b / 2.0
+  end
+  #What if the numbers are equal?!
+end
 
 #solved by loris
 def arithmetic2(a, b)
@@ -50,4 +59,15 @@ def arithmetic2(a, b)
   else
     return b / 2.0
   end
+end
+
+#Yannick
+def arithmetic2(a, b)
+	([a,b].min)*0.5.to_f
+end
+
+#kevin lanzon
+# Used a ternary operator
+def arithmetic2(a, b)
+  arithmetic2 = a < b ? a / 2.0 : b / 2.0
 end

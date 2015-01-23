@@ -58,6 +58,7 @@ def pirates_say_arrrrrrrrr(string)
   return_letter
 end
 
+
 #solved by loris
 def pirates_say_arrrrrrrrr(string)
   newString = String.new
@@ -69,4 +70,41 @@ def pirates_say_arrrrrrrrr(string)
     end
   end
   return newString
+
+#Phil
+def pirates_say_arrrrrrrrr(string)
+  stringArray = string.split ""
+  returnString = ""
+
+  i = 0
+  while i < stringArray.length - 1
+    if stringArray[i] == "r" || stringArray[i] == "R"
+      returnString << stringArray[i + 1]
+    end
+    i = i + 1
+  end
+    returnString
+end
+
+#Yannick
+def pirates_say_arrrrrrrrr(string)
+  answer = ""
+  cycles = string.size - 1
+  cycles.times do |x|
+    if string[x] == "r" || string[x] == "R"
+    answer << string[x + 1]
+    end
+  end
+answer
+end
+
+#kevin lanzon
+def pirates_say_arrrrrrrrr(string)
+  character = String.new
+  string.length.times do |letter|
+    if /[rR]/.match(string[letter]) then # Found match method. Matches characters enclosed in /[]/
+      character << string[letter + 1] unless string[letter + 1] == nil # Unless counters the if statement
+    end
+  end
+  character
 end

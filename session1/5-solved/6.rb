@@ -79,6 +79,7 @@ def odds_and_evens(string, return_odds)
   return newString
 end
 
+
 #Sebastien
 def odds_and_evens(string, return_odds)
   newString = String.new
@@ -107,5 +108,66 @@ def odds_and_evens(string, return_odds)
 
   end
   return newString
+end
+
+
+#Phil
+def odds_and_evens(string, return_odds)
+  stringArray = string.split ""
+  returnString = ""
+
+  if return_odds == true
+  stringArray.length.times do |index|
+    if index.odd?
+      returnString << string[index]
+    end
+  end
+  elsif
+    stringArray.length.times do |index|
+      if index.even?
+        returnString << stringArray[index]
+      end
+    end
+  end
+  returnString
+end
+
+#Yannick
+def odds_and_evens(string, return_odds)
+  finish_array = ""
+  if return_odds
+    string.split("").each {|x| x.to_i % 2 != 0 ? finish_array << x : nil}
+  else
+    string.split("").each {|x| x.to_i % 2 == 0 ? finish_array << x : nil}
+  end
+finish_array
+end
+
+
+#kevin lanzon
+def odds_and_evens(string, return_odds)
+
+  if return_odds
+    # This returns odd letters .odd?
+    return_letters = String.new # Returns letters in a string. Could use = ""
+    string.size.times do |letter|
+      if letter.odd?
+        return_letters << string[letter] # This returns "bdf"
+      end
+    end
+
+    return_letters # This returns the string
+
+  else
+    #  This returns even letters .even?
+    return_letters = String.new
+    string.size.times do |letter|
+      if letter.even?
+        return_letters << string[letter] # This returns "aceg"
+      end
+    end
+
+    return_letters
+    end
 end
 

@@ -113,3 +113,63 @@ def grade(num_books, reads_books)
 
 end
 
+#Phil
+def grade(num_books, reads_books)
+
+  if reads_books == true
+
+    if num_books < 10
+      return "C"
+    elsif num_books >= 10 && num_books <= 20
+      return "B"
+    elsif num_books > 20
+      return "A"
+    end
+
+  else
+
+    if num_books < 10
+      return "D"
+    elsif num_books >= 10 && num_books <= 20
+      return "C"
+    elsif num_books > 20
+      return "B"
+    end
+
+  end
+end
+
+#Yannick
+def grade(num_books, has_read_books)
+
+  grades = {1 => "A",2 => "B",3 => "C",4 => "D"}
+  score = 0
+
+  has_read_books ? score += 1 : score = 0
+  num_books >= 10 ? score +=1 : nil
+  num_books > 20 ? score +=1 : nil
+
+  grades[grades.length - score]
+
+end
+
+#kevin lanzon
+def grade(num_books, reads_books)
+  if reads_books == true
+      if num_books < 10
+        "C"
+      elsif num_books <= 20
+        "B"
+      else
+        "A"
+      end
+  else
+      if num_books < 10
+        "D"
+      elsif num_books <= 20
+        "C"
+      else
+        "B"
+      end
+    end
+end

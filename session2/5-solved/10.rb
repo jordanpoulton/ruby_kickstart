@@ -24,3 +24,20 @@ class Person
 	end
 end
 #===============================
+
+#Sebastien
+class Person
+
+	attr_accessor 'name'
+	attr_accessor 'age'
+
+	def initialize(name, age)
+		@name = name
+		@age = age
+	end
+
+	def birthday
+		@birthday = age + 1
+		@age = age + 1
+	end
+end

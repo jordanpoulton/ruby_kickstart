@@ -21,3 +21,16 @@ end
 #The editor is used doesn't support UTF-8 characters, the unicode number had to be used
 #in the regex to pick up apostrophes over single quotes.
 #=================================
+
+#Sebastien
+def alternate_words(wrd)
+  result = []
+  counter = 0
+  wrd_2 = wrd.gsub(/[!@$#%^&*()-=_+\[\]:;,.\/<>?\|]/, " ")
+  words = wrd_2.split(/\s+/)
+  words.each do |word|
+    result << word if counter % 2 == 0
+    counter += 1
+  end
+  return result
+end
