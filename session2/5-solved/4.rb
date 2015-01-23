@@ -11,3 +11,10 @@ def get_squares arr
 	return result
 end
 #============================
+
+
+#Sebastien
+
+def get_squares(n)
+  n.select { |x| n.include? x*x }.sort
+end
