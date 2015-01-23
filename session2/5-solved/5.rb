@@ -9,3 +9,9 @@ def mod_three arr
 	#Next use map(which returns a the new array) to return mod of 3 applied to the filtered hash.
 end	
 #==============================================
+
+#Sebastien
+def mod_three(num)
+ num.select {|e| e % 3 != 0}.map {|e| e % 3}
+	
+end

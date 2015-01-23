@@ -40,3 +40,60 @@ class BeerSong
     end.capitalize
   end
 end
+
+
+#Sebastien
+class BeerSong
+  attr_accessor :bottles
+
+  def initialize(bottles)
+    if bottles < 0 then bottles = 0
+    elsif bottles > 99 then bottles = 99
+    end
+    self.bottles = bottles
+  end
+  
+  def stanza(bottles)
+    puts "#{translate bottles} #{bottle bottles} of beer on the wall,"
+    puts "#{translate bottles} #{bottle bottles} of beer," 
+
+    puts "Take one down, pass it around,"
+    puts "#{translate bottles-1} #{bottle bottles-1} of beer on the wall."
+  end
+
+  def bottle(n)
+    n == 1 ? "bottle" : "bottles"
+  end
+
+  def print_song
+    if self.bottles == 0 then return "" end
+    while self.bottles > 0
+      stanza(self.bottles)
+      self.bottles -= 1
+    end
+  end
+
+  def translate(n)
+    tens = %w(. . twenty thirty forty fifty sixty seventy eighty ninety)
+    teens = %w(ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen)
+    ones = %w(zero one two three four five six seven eight nine ten)
+    
+    if n >= 20 then
+      str = tens[n/10].capitalize
+      if n % 10 != 0
+        str << "-" 
+        str << ones[n%10]
+      end
+      return str
+    end
+
+    if n >= 10 && n <= 19 then
+      return teens[n%10].capitalize
+    end
+
+  
+    if n <= 9 then
+      ones[n].capitalize
+    end
+  end
+end

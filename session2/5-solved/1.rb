@@ -16,3 +16,12 @@ def sum_difference_product
 	#if name is like "Jim Jones" you can use this split and assign first and last names first, last = name.split
 end
 #==========================
+
+#Sebastien
+def sum_difference_product
+  a, b = gets.split.map { |e| e.to_i  }
+  puts a+b
+  puts a-b
+  puts a*b
+
+end
