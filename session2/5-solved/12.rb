@@ -23,3 +23,33 @@ class Fraction
     Fraction.new(numerator/divisor, denominator/divisor)
   end
 end
+
+
+#Sebastien
+class Fraction
+
+  attr_accessor 'numerator' , 'denominator'
+
+  def initialize(numerator, denominator)
+    @numerator = numerator
+    @denominator = denominator
+  end
+
+    def to_f
+      numerator / denominator.to_f
+    end
+
+    def gcd(a,b)
+        if b == 0 then a else gcd( b , a%b ) end
+    end
+
+    def lowest
+      divisor = gcd(numerator , denominator)
+      Fraction.new(numerator/divisor , denominator/divisor)
+    end
+
+    def to_s
+      "#{numerator}/#{denominator}"
+    end
+  
+end
