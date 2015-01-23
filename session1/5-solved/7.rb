@@ -55,3 +55,19 @@ def pirates_say_arrrrrrrrr(string)
   end
   return_letter
 end
+
+
+#Phil
+def pirates_say_arrrrrrrrr(string)
+  stringArray = string.split ""
+  returnString = ""
+  
+  i = 0
+  while i < stringArray.length - 1
+    if stringArray[i] == "r" || stringArray[i] == "R"
+      returnString << stringArray[i + 1]
+    end
+    i = i + 1
+  end 
+    returnString
+end

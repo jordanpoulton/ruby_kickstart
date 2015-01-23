@@ -29,3 +29,7 @@ def arithmetic1(n)
  	n * 5 - 20 
 end
 
+#Phil
+def arithmetic1(n)
+  (n * 5) - 20
+end

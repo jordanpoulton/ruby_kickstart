@@ -89,3 +89,28 @@ def grade(num_books, reads_books)
 
 end
 
+#Phil
+def grade(num_books, reads_books)
+  
+  if reads_books == true
+    
+    if num_books < 10
+      return "C"
+    elsif num_books >= 10 && num_books <= 20
+      return "B"
+    elsif num_books > 20
+      return "A"
+    end
+    
+  else
+    
+    if num_books < 10
+      return "D"
+    elsif num_books >= 10 && num_books <= 20
+      return "C"
+    elsif num_books > 20
+      return "B"
+    end
+    
+  end
+end
