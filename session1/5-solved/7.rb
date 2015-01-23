@@ -34,14 +34,40 @@ def pirates_say_arrrrrrrrr(string)
   answer
 end
 
+#Costas
+def pirates_say_arrrrrrrrr(string)
+  x=String.new
+  (string.length - 1).times do |index|
+    if string[index] == "r" || string[index] == "R"
+    x << string[index+1]
+  end
+end
+  x
+
 #Sebastien
 def pirates_say_arrrrrrrrr(string)
   return_letter = ""
   add_next_letter = false
   string.size.times do |x|
-    current_letter = string[x,1] 
+    current_letter = string[x,1]
     return_letter << current_letter if add_next_letter
     add_next_letter = (current_letter == "r" || current_letter == "R")
   end
   return_letter
+end
+
+
+#Phil
+def pirates_say_arrrrrrrrr(string)
+  stringArray = string.split ""
+  returnString = ""
+  
+  i = 0
+  while i < stringArray.length - 1
+    if stringArray[i] == "r" || stringArray[i] == "R"
+      returnString << stringArray[i + 1]
+    end
+    i = i + 1
+  end 
+    returnString
 end

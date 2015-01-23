@@ -36,6 +36,24 @@ def odds_and_evens(string, return_odds)
 answer
 end
 
+#Costas
+def odds_and_evens(string, return_odds)
+  x = String.new
+
+    if return_odds == true
+      string.length.times do |index|
+    next if index.even? == true
+     x << string[index]
+ end
+else
+  string.length.times do |index|
+    next if index.odd? == true
+    x << string[index]
+  end
+end
+  x
+end
+
 #Sebastien
 def odds_and_evens(string, return_odds)
   newString = String.new
@@ -46,16 +64,37 @@ def odds_and_evens(string, return_odds)
       if k%2!=0
         newString<<v
       end
-        
+
       end
     else
       stringArray.each_with_index do |v,k|
         if k%2==0
           newString<<v
         end
-          
+
         end
-    
+
   end
   return newString
+end
+
+#Phil
+def odds_and_evens(string, return_odds)
+  stringArray = string.split ""
+  returnString = ""
+ 
+  if return_odds == true
+  stringArray.length.times do |index|
+    if index.odd?
+      returnString << string[index]
+    end
+  end
+  elsif
+    stringArray.length.times do |index|
+      if index.even?
+        returnString << stringArray[index]
+      end
+    end
+  end
+  returnString
 end
