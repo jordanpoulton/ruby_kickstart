@@ -40,3 +40,13 @@ def ten_twenty(n)
   end
 end
 
+#Phil
+def ten_twenty(n)
+  if n.even?
+    10
+  else
+    20
+  end
+  #What if n is 0?!
+end
+

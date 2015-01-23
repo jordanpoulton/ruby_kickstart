@@ -42,5 +42,14 @@ def arithmetic2(a, b)
 	end
 end
 
+#Phil
+def arithmetic2(a, b)
+  if a < b
+    a / 2.0
+  else a > b
+    b / 2.0
+  end
+  #What if the numbers are equal?!
+end
 
 

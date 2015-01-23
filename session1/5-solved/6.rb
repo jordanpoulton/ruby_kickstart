@@ -78,3 +78,23 @@ def odds_and_evens(string, return_odds)
   return newString
 end
 
+#Phil
+def odds_and_evens(string, return_odds)
+  stringArray = string.split ""
+  returnString = ""
+ 
+  if return_odds == true
+  stringArray.length.times do |index|
+    if index.odd?
+      returnString << string[index]
+    end
+  end
+  elsif
+    stringArray.length.times do |index|
+      if index.even?
+        returnString << stringArray[index]
+      end
+    end
+  end
+  returnString
+end
