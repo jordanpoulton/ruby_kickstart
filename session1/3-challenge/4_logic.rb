@@ -9,3 +9,7 @@
 # grade(4,  true)   # => "C"
 # grade(15, true)   # => "B"
 
+def grade(num_books, has_read_books)
+end
+
+

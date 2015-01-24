@@ -4,6 +4,8 @@
 10.class.ancestors    # => [Fixnum, Integer, Numeric, Comparable, Object, Kernel, BasicObject]
 10.0.class.ancestors  # => [Float, Numeric, Comparable, Object, Kernel, BasicObject]
 
+#Jordan: The class inheritance tree for Ruby isn't as complicated as you might think... http://edwinmeyer.com/Release_Integrated_RHG_09_10_2008/images/ch_minimum_classtree.jpg
+
 # They are both numbers (we haven't talked about classes yet, but notice that Numeric is in the ancestry)
 # but they have slightly different behavior. For example, integer division gives an integer,
 # but float division gives a float.

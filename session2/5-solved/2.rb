@@ -27,7 +27,42 @@ def hi_hi_goodbye
   puts "Goodbye!"
 end
 
+#solved by meads
+def hi_hi_goodbye
+	#loop while getting user input
+	while user_input = gets.chomp #why is this = and not ==? A good explanation is here http://www.evc-cit.info/cit020/beginning-programming/chp_04/file_while.html
+		user_input.to_i.times {|n| print 'hi '}#convert input to an int and loop than number of times printing 'hi'
+		puts ""
+		break if user_input == "bye" #break to jump out of the loop.
+	end
+	puts "goodbye"
+end
+#===========================
 
+
+#Sebastien
+
+def hi_hi_goodbye
+  puts "Enter a number"
+
+  while input = gets
+    puts "hi " * input.to_i
+    break if input == "bye"
+
+  end
+ puts "goodbye"
+end
+
+#kevin lanzon
+def hi_hi_goodbye
+  puts "Please enter a number: "
+  while num = gets.chomp # Can't add .to_i here as it affects the input "bye"
+  num.to_i.times { |n| puts "hi " } # Input to integer
+    puts " "
+    break if num == "bye"
+  end
+  puts "goodbye"
+end
 
 
 
