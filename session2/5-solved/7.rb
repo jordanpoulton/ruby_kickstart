@@ -46,3 +46,18 @@ def alternate_words(wrd)
   end
   return result
 end
+
+
+#--------------------------------------
+#paul fitz
+
+def alternate_words(sentence)
+  answer = []         #create an empty array for the answer
+  new_sen = sentence.gsub(/[! @ $ # % ^ & * ( ) \-\ = _ + \[\]:;,.\/<>?\|]/," ") #use gsub to replace all the selected characters with ""
+  newer_sen = new_sen.split                      #use split method
+  newer_sen.each.with_index do |x, y|
+    answer << x if y.even?
+  end
+  answer
+end
+
