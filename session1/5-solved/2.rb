@@ -71,3 +71,15 @@ end
 def arithmetic2(a, b)
   arithmetic2 = a < b ? a / 2.0 : b / 2.0
 end
+
+
+# Tom Coakes
+def arithmetic2(a, b)
+  if a < b
+    (a.to_f) / 2
+  elsif a > b
+    (b.to_f) / 2
+  else
+    (a.to_f) / 2  # Because they'll both be the same number
+  end
+end

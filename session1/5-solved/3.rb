@@ -73,3 +73,9 @@ def ten_twenty(n)
     return 20
   end
 end
+
+
+# Tom Coakes
+def ten_twenty(n)
+  n.even? ? 10 : 20
+end
