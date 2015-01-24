@@ -15,5 +15,4 @@
 # josh.age      # => 30
 #
 
-class Person
-end
+
