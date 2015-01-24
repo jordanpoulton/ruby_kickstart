@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #paul fitz
 def pirates_say_arrrrrrrrr(string)
 	answer = ""
@@ -12,8 +11,6 @@ def pirates_say_arrrrrrrrr(string)
 	answer
 end
 
-=======
->>>>>>> 3bf4f13c8ec92f091316d28e588d152431947c8e
 def pirates_say_arrrrrrrrr(string)
   to_return = ""
   add_next = false
