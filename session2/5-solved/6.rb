@@ -37,3 +37,18 @@ end
 def prime_chars?(car)
   is_prime? car.join.length
 end
+
+#------------------------------------------
+
+#paul fitz
+def prime_chars?(strings)
+
+  a = strings.join.length #this is the number of characters in the array. .JOIN is method used to change an array to a string
+  if a < 2
+    return false
+  end
+  (2...a).each do |n|
+    return false if a % n == 0
+  end
+  return true
+end
