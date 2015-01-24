@@ -21,8 +21,23 @@
 # f.to_f               # => 0.5
 
 class Fraction
+
+	
   def gcd(a,b)
     return a if b == 0
     gcd(b, a%b)
   end
+	
+	def numerator a
+		@numerator = 	numerator
+	end
+	
+	def denominator b
+		@denominator = denominator
+	end
+	
 end
+
+a = Fraction.new(20,60)
+puts a.numerator
+
