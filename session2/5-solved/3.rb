@@ -34,3 +34,17 @@ class String
     other_char
   end
 end
+
+
+#kevin lanzon
+class String
+  def every_other_char
+    character = String.new                 
+    (0...self.length).step.each do |index|    # self gives access to the current object (every_other_char)
+                                              # Set a range starting at 0 in the returned array.
+                                              # The step method skips through the index
+      character << self[index] if index.even? # Changed range from (0..self.length - 1) which works the same.
+    end                                       # .even? returns true on an even index number in the array.
+    character
+  end
+end

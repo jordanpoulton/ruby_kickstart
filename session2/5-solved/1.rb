@@ -25,3 +25,11 @@ def sum_difference_product
   puts a*b
 
 end
+
+#kevin lanzon
+def sum_difference_product
+  a, b = gets.split.map { |n| n.to_i } # .split divides string and returns into an array
+  puts a + b
+  puts a - b
+  puts a * b
+end
