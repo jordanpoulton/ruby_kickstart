@@ -9,6 +9,16 @@ def pirates_say_arrrrrrrrr(string)
   to_return
 end
 
+#Jordan
+def pirates_say_arrrrrrrrr(string)
+  output = String.new
+  string.chars.each_with_index do |letter, index|
+    output << string[index+1].to_s if letter == "r" || letter == "R"
+  end
+  output
+end
+
+
 #solved by meads
 def pirates_say_arrrrrrrrr(string)
 	result = ""
@@ -116,12 +126,12 @@ def pirates_say_arrrrrrrrr(string)
   r_count = string.downcase.count('r')
   nil_index = (string.length)
   index = 0
-  
+
   (r_count).times do
     index = string.downcase.index("r", index) + 1
     break if index == nil_index
     new_string << string[index]
   end
-    
+
   return new_string
 end

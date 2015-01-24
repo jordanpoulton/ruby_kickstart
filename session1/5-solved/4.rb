@@ -11,6 +11,19 @@ def grade(num_books, reads_books)
   end
 end
 
+#Jordan
+def grade(num_books, reads_books)
+  if reads_books
+    return "C" if num_books <  10
+    return "B" if num_books <= 20
+    return "A"
+  else
+    return "D" if num_books <  10
+    return "C" if num_books <= 20
+    return "B"
+  end
+end
+
 #Solved by meads, I really need to refactor this
 def grade(num_books, reads_books)
 	if reads_books == true
@@ -186,6 +199,6 @@ def grade(num_books, has_read_books)
     grade = "B" if (num_books >=10) && (num_books <= 20)
     grade = "A" if num_books > 20
   end
-  
+
   return grade
 end

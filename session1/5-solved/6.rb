@@ -8,6 +8,19 @@ def odds_and_evens(string, return_odds)
   to_return
 end
 
+#JORDAN
+def odds_and_evens(string, return_odds)
+  output = ""
+  string.chars.each_with_index do |character, index|
+    if return_odds
+      output << character if index.odd?
+    else
+      output << character if index.even?
+    end
+  end
+  output
+end
+
 #Solved by meads
 def odds_and_evens(string, return_odds)
 	result = String.new
