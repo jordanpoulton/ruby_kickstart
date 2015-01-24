@@ -2,6 +2,7 @@
 def odds_and_evens(string, return_odds)
 	answer = ""
 	
+	
 	string.length.times do |i|
 		next if return_odds && i.even?
 		next if !return_odds && i.odd?

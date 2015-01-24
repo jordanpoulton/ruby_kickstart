@@ -1,6 +1,7 @@
 #paul fitz
 def pirates_say_arrrrrrrrr(string)
 	answer = ""
+	number = string.length - 1
 	string.length.times do |i|
 		 string[i]
 		 if string[i] == "r" || string [i] == "R"
