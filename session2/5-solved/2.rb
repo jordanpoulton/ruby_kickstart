@@ -38,6 +38,7 @@ def hi_hi_goodbye
  puts "goodbye"
 end
 
+#kevin lanzon
 def hi_hi_goodbye
   puts "Please enter a number: "
   while num = gets.chomp # Can't add .to_i here as it affects the input "bye"
