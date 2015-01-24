@@ -20,3 +20,14 @@ def got_three?(array)
 	end
 	return false
 end
+
+#--------------------
+#paul fitz
+def got_three?(input)
+	input.each_cons(3) do |a, b, c|   #.each_cons is used to grab consecutive elements in an array
+	  if a == b && a == c
+	  	return true
+	  end
+	end
+	return false
+end
