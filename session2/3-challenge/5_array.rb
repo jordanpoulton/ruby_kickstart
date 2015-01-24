@@ -14,8 +14,5 @@
 #
 # mod_three [0,1,2,3,4,5,6,7] # => [1, 2, 1, 2, 1]
 
-<<<<<<< HEAD
-=======
 def mod_three(array)
 end
->>>>>>> df9c9be35d3fc9639e6d8e731985ac709c55fda8
