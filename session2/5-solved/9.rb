@@ -10,6 +10,17 @@ def deaf_grandma
   end
 end
 
+#Jordan
+def deaf_grandma
+  while statement = gets.chomp
+    break if statement == "BYE"
+    if statement == statement.upcase && statement != ""
+      puts "NO, NOT SINCE 1938!"
+    else
+      puts "HUH?! SPEAK UP, SONNY!"
+    end
+  end
+end
 
 def deaf_grandma
 	while line = gets.chomp
@@ -19,7 +30,7 @@ def deaf_grandma
 		else
 			puts 'HUH?! SPEAK UP, SONNY!' #all other cases, inlcuding a blank line do this.
 		end
-	end	
+	end
 end
 #=================================
 #Sebastien
@@ -32,7 +43,7 @@ end
 def deaf_grandma
   while (input = gets.chomp) && ( input !~ /BYE/)
     if input.caps? && input != ""
-      puts "NO, NOT SINCE 1938!" 
+      puts "NO, NOT SINCE 1938!"
     else
       puts "HUH?! SPEAK UP, SONNY!"
     end

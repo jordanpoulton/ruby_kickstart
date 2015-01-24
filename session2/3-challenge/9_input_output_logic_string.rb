@@ -24,7 +24,6 @@
 # USER:     BYE
 
 def deaf_grandma
-
 end
 
 
