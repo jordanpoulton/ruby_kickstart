@@ -40,3 +40,140 @@ class BeerSong
     end.capitalize
   end
 end
+
+
+#Sebastien
+class BeerSong
+  attr_accessor :bottles
+
+  def initialize(bottles)
+    if bottles < 0 then bottles = 0
+    elsif bottles > 99 then bottles = 99
+    end
+    self.bottles = bottles
+  end
+
+  def stanza(bottles)
+    puts "#{translate bottles} #{bottle bottles} of beer on the wall,"
+    puts "#{translate bottles} #{bottle bottles} of beer,"
+
+    puts "Take one down, pass it around,"
+    puts "#{translate bottles-1} #{bottle bottles-1} of beer on the wall."
+  end
+
+  def bottle(n)
+    n == 1 ? "bottle" : "bottles"
+  end
+
+  def print_song
+    if self.bottles == 0 then return "" end
+    while self.bottles > 0
+      stanza(self.bottles)
+      self.bottles -= 1
+    end
+  end
+
+  def translate(n)
+    tens = %w(. . twenty thirty forty fifty sixty seventy eighty ninety)
+    teens = %w(ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen)
+    ones = %w(zero one two three four five six seven eight nine ten)
+
+    if n >= 20 then
+      str = tens[n/10].capitalize
+      if n % 10 != 0
+        str << "-"
+        str << ones[n%10]
+      end
+      return str
+    end
+
+    if n >= 10 && n <= 19 then
+      return teens[n%10].capitalize
+    end
+
+
+    if n <= 9 then
+      ones[n].capitalize
+    end
+  end
+end
+
+#Jordan
+class BeerSong
+  NUMBERS = {
+    1=> "one",
+    2=> "two",
+    3=> "three",
+    4=> 'four',
+    5=> "five",
+    6=> "six",
+    7=> "seven",
+    8=> "eight",
+    9=> "nine",
+    10=> "Ten"
+  }
+
+  TEENS = {
+    11=> "Eleven",
+    12=> "Twelve",
+    13=> "Thirteen",
+    14=> "Fourteen",
+    15=> "Fifteen",
+    16=> "Sixteen",
+    17=> "Seventeen",
+    18=> "Eighteen",
+    19=> "Nineteen",
+    20=> "Twenty"
+  }
+
+  TENS = {
+    0=> "Zero",
+    10=> "Ten",
+    20=> "Twenty",
+    30=> "Thirty",
+    40=> "Forty",
+    50=> "Fifty",
+    60=> "Sixty",
+    70=> "Seventy",
+    80=> "Eighty",
+    90=> "Ninety"
+  }
+
+  def initialize(number_of_beers)
+    @number_of_beers = number_of_beers
+    @number_of_beers = 0 if number_of_beers < 0
+    @number_of_beers = 99 if number_of_beers > 99
+  end
+
+  def translate(n)
+    return  TENS[0] if n == 0
+    if 0 < n && n < 11
+      NUMBERS[n]
+    elsif 10 < n && n < 21
+      TEENS[n]
+    elsif n % 10 == 0
+      TENS[n]
+    else
+      return "#{translate ((n/10)*10)}-#{translate n%10}"
+    end
+  end
+
+  attr_accessor :number_of_beers
+
+  def stanza(number)
+    puts "#{translate(number).capitalize} #{bottle_s(number)} of beer on the wall,"
+    puts "#{translate(number).capitalize} #{bottle_s(number)} of beer,"
+    puts "Take one down, pass it around,"
+    puts "#{translate(number-1).capitalize} #{bottle_s(number-1)} of beer on the wall."
+  end
+
+  def bottle_s(number)
+    translate(number) == "one" ? "bottle" : "bottles"
+  end
+
+  def print_song
+    number_of_beers.downto 1 do |num|
+      stanza(num)
+    end
+  end
+end

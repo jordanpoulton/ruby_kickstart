@@ -5,11 +5,11 @@
 # Given a number, return 20 less than, that number multiplied by 5
 #
 # arithmetic1(10)     # => 30
-# arithmeitc1(10.5)   # => 32.5
-# arithmeitc1(-6)     # => -50
+# arithmetic1(10.5)   # => 32.5
+# arithmetic1(-6)     # => -50
 
-
-#kevin lanzon
 def arithmetic1(n)
-  return (n * 5) - 20
+  result = (n * 5) - 20
+  return result
 end
+
