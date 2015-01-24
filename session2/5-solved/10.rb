@@ -54,3 +54,17 @@ class Person
     self.age += 1
   end
 end
+
+#======================================
+#paul fitz
+class Person
+	attr_accessor 'age'			#attr_accessor is a method that defines getter and setter methods for instance variables
+	attr_accessor 'name'
+	def initialize(name,age)	#initialize can be thought of as the function that "boots up" each object the class creates.
+		@name = name
+		@age = age 
+end
+	def birthday 
+	@age += 1					#when josh.birthday is invoked Josh's age will also increase by one.
+	end
+end
