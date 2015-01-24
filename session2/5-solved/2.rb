@@ -49,6 +49,16 @@ def hi_hi_goodbye
   puts "goodbye"
 end
 
+#Jordan
+def hi_hi_goodbye
+  puts "Enter a number: "
+  while (input = gets.chomp) && (input !~ /bye/)
+    input.to_i.times {|i| print "hi "}
+    puts "Enter a number: "
+  end
+  puts "goodbye"
+end
+
 
 
 hi_hi_goodbye if $0 == __FILE__  # a little magic so that you can run with "$ ruby 2_input_output_control.rb" but it will still work for our tests

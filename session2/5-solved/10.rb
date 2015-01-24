@@ -17,8 +17,8 @@ class Person
 	def initialize(name, age)#values set up when the object is first created.
 		@name = name
 		@age = age
-	end	
-	
+	end
+
 	def birthday
 		@age = age + 1
 	end
@@ -40,4 +40,17 @@ class Person
 		@birthday = age + 1
 		@age = age + 1
 	end
+end
+
+#Jordan
+class Person
+  def initialize name, age
+    @name, @age,  = name, age
+  end
+
+  attr_accessor :name, :age
+
+  def birthday
+    self.age += 1
+  end
 end
