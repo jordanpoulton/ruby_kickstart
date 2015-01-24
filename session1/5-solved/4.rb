@@ -173,3 +173,19 @@ def grade(num_books, reads_books)
       end
     end
 end
+
+
+# Tom Coakes
+def grade(num_books, has_read_books)
+  if !has_read_books
+    grade = "D" if num_books < 10
+    grade = "C" if (num_books >=10) && (num_books <= 20)
+    grade = "B" if num_books > 20
+  elsif has_read_books
+    grade = "C" if num_books < 10
+    grade = "B" if (num_books >=10) && (num_books <= 20)
+    grade = "A" if num_books > 20
+  end
+  
+  return grade
+end

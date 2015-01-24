@@ -171,3 +171,18 @@ def odds_and_evens(string, return_odds)
     end
 end
 
+
+# Tom Coakes
+def odds_and_evens(string, return_odds)
+  new_string = ""
+  if return_odds
+    string.split('').each_with_index do |char, index|
+      new_string << char if index.odd?
+    end
+  else
+    string.split('').each_with_index do |char, index|
+      new_string << char if index.even?
+    end
+  end
+  new_string
+end

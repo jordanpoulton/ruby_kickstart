@@ -45,3 +45,10 @@ end
 def add_more_ruby(string)
   string.gsub(/Sad/, "Happy").gsub(/sad/, "happy")
 end
+
+
+# Tom Coakes
+def add_more_ruby(string)
+  lowercase_replaced = string.gsub("sad", "happy")
+  lowercase_replaced.gsub("Sad", "Happy")
+end

@@ -108,3 +108,20 @@ def pirates_say_arrrrrrrrr(string)
   end
   character
 end
+
+
+# Tom Coakes
+def pirates_say_arrrrrrrrr(string)
+  new_string = ""
+  r_count = string.downcase.count('r')
+  nil_index = (string.length)
+  index = 0
+  
+  (r_count).times do
+    index = string.downcase.index("r", index) + 1
+    break if index == nil_index
+    new_string << string[index]
+  end
+    
+  return new_string
+end
