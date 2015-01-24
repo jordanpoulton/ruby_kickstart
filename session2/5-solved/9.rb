@@ -39,8 +39,17 @@ def deaf_grandma
   end
 end
 
-
-
-
-
 deaf_grandma if $0 == __FILE__ # this will call your code so you can run it from the terminal
+
+#------------------------------------------
+#paul fitz
+def deaf_grandma
+  while answer = gets.chomp
+  break if answer == "BYE"
+  if answer == answer.upcase && answer != ""
+    puts "NO, NOT SINCE 1938!"
+  else
+    puts "HUH?! SPEAK UP, SONNY!"
+  end
+end
+end

@@ -23,10 +23,6 @@
 # GRANDMA:  HUH?! SPEAK UP, SONNY!
 # USER:     BYE
 
-def deaf_grandma
-
-end
-
 
 
 

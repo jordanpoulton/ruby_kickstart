@@ -14,3 +14,15 @@
 # prime_chars? ['ab', 'cd']       # => false
 # prime_chars? ['a', 'bcd']       # => false
 # prime_chars? ['a', 'b', 'cd']   # => false
+def got_three?(input)
+ 	input.each_cons(3) do |a, b, c|
+ 		if a == b && b == c
+ 			return true 
+ 	end
+ end
+ 
+ 	
+ 
+end 
+
+puts got_three?(["abbbcdeeed"])
