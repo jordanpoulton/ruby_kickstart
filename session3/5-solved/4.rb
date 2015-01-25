@@ -5,3 +5,18 @@ def first_pos(str)
   end
   to_return
 end
+
+
+#=========================
+#paul fitz
+
+def first_pos(string)
+	answer = Hash.new
+
+	array = string.split(' ')
+	
+	array.each do |x|
+	answer[x] = array.index(x)
+end
+answer	
+end
