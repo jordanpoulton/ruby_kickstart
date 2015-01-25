@@ -83,3 +83,23 @@ class String
     result
   end
 end
+
+# solved by Riz
+class String
+  def every_other_char
+    array = ''
+    index = 0
+
+    letters = self.split("").each do |letter|
+     
+      array << letter if index.even?
+  
+      print array
+      index += 1
+      
+    end
+    return array
+    
+  end
+
+end
