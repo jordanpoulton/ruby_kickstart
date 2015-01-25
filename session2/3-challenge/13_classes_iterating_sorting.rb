@@ -71,14 +71,49 @@ class User
 	
 	def initialize username
 		@username = username
+		@blog = []
 	end
 	
 	def add_blog date, text
-		@blogs << [date,text]
+		@blog.push([date,text]) 
+		@blog.sort_by!{|x| x[0]}
+		puts @blog
+	end
+	
+	#def blogs
+	#	allblogs = Array.new 
+		#@blogs.each {|x| allblogs.push(x[1])}
+	#	return allblogs
+	#end
+
+end
+
+class Blog
+	attr_accessor :date , :user, :text
+	
+	def initialize date , user, text
+		@text = text
+		@date = date
+		@user = user
+	end
+	
+	def summary
+		@text.split(' ').first(10).join(' ')
+	end
+	
+	def entry
+		return "#{@user.username} #{@date}\n#{@text}"
+	end
+	
+	def ==(other)
+		@user == other.user &&
+		@text == other.text &&
+		@date == other.date
 	end
 	
 end
 
 
 a = User.new 'QTSort'
+#a.add_blog Date.parse("2010-05-28") , "Sailor Mars is my favourite"
 puts a
