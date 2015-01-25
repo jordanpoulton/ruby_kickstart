@@ -132,7 +132,6 @@ def pirates_say_arrrrrrrrr(string)
   character
 end
 
-
 # Tom Coakes
 def pirates_say_arrrrrrrrr(string)
   new_string = ""
@@ -147,4 +146,14 @@ def pirates_say_arrrrrrrrr(string)
   end
 
   return new_string
+end
+
+# Sean Haughton
+def pirates_say_arrrrrrrrr(string)
+  new_string = String.new
+  string.chars.each_with_index do |letter, index|
+
+      new_string << string[index+1].to_s if letter == "r" || letter == "R"
+      end
+  new_string
 end
