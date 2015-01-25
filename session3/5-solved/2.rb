@@ -10,3 +10,14 @@ def staircase(n)
 end
 
 
+#Sebastien
+def staircase(number)
+	newHash = Hash.new { |hash, key| hash[key] =[]  }
+	(1..number).each do |x|
+		newHash.delete_if{|key, val| key.even?}
+		if x.odd?
+			newHash[x] = (1..x).step(1).to_a.select { |e| e.even? }
+		end
+	end
+	return newHash
+end
