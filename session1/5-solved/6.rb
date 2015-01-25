@@ -244,3 +244,21 @@ def odds_and_evens(string, return_odds)
 end
 
 
+
+#Guido
+
+def odds_and_evens(string, return_odds)	
+	str = ""	
+	string.length.times do |i|
+		if return_odds
+		  next if i % 2 == 0
+		  str << string[i]
+		else
+		  next if i % 2 != 0
+		  str << string[i]
+		end
+	end
+			str
+end
+
+#This can definitely be refactored!!

@@ -101,3 +101,9 @@ if n.even?
     return 20
   end
 
+
+#Guido
+
+def ten_twenty(n)
+	n.even? ? 10 : 20
+end
