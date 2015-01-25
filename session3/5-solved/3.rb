@@ -12,3 +12,19 @@ def word_count(string)
   end
   output
 end
+
+#==============================
+#meads and paul
+def word_count(string)
+	answer = Hash.new(0)
+
+	words = string.downcase.split(' ')
+
+	words.each {|sentence| answer[sentence] += 1}
+
+	p words
+	answer
+end
+
+
+

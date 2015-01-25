@@ -15,8 +15,6 @@
 #        return self.date == other.date
 #      end
 
-
-
 # ==========  EXAMPLE  ==========
 #
 # lissa = User.new 'QTSort'
@@ -63,7 +61,3 @@
 
 # date docs are at: http://ruby-doc.org/core/classes/Date.html
 # don't spend too much time worrying about them :)
-require 'date'
-
-class User
-end
