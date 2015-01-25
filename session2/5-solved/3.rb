@@ -103,3 +103,15 @@ class String
   end
 
 end
+
+
+#Costas
+class String
+  def every_other_char
+    array = ''
+    self.chars.each_with_index do |c, index|
+      array << c if index.even? == true
+    end
+    array
+  end
+end
