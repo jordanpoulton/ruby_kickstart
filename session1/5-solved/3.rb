@@ -31,6 +31,16 @@ def ten_twenty(n)
 end
 #==================
 
+#solved by loris
+def ten_twenty(n)
+  if n % 2 == 0
+    return 10
+  else
+    return 20
+  end
+end
+
+
 #Sebastien
 def ten_twenty(n)
   if n % 2 == 0
@@ -50,3 +60,31 @@ def ten_twenty(n)
   #What if n is 0?!
 end
 
+#Yannick
+def ten_twenty(n)
+  n % 2 == 0 ? 10 : 20
+end
+
+#kevin lanzon
+def ten_twenty(n)
+  if n % 2 == 0
+    return 10
+  else
+    return 20
+  end
+end
+
+
+# Tom Coakes
+def ten_twenty(n)
+  n.even? ? 10 : 20
+end
+
+# Sean Haughton
+def ten_twenty(n)
+  if n.odd?
+    return 20
+  else
+    return 10
+  end
+end
