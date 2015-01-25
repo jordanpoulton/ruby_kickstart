@@ -88,3 +88,13 @@ def ten_twenty(n)
     return 10
   end
 end
+
+# Rizwan Ali
+if n.even?
+    return 10
+  elsif n.odd?
+    return 20
+  end
+
+
+

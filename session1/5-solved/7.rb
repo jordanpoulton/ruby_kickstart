@@ -166,11 +166,8 @@ def pirates_say_arrrrrrrrr(string)
   add_next = false
   string = string.split("").each do |letter|
     if letter == "r" || letter =="R"
-      #puts string[index], index
       if index + 1 < string.size
-      #if index < string.size
         add_next= index + 1
         newString << string[add_next]
       end
-    
     end

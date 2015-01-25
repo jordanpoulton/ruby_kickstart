@@ -224,19 +224,13 @@ def odds_and_evens(string, return_odds)
   index = 0
   letters = string.split("").each do |letter|
     if index.even? && return_odds == false
-      #puts index
       newString << letter
     end
     if index.odd? && return_odds == true
-      #puts index
-      newString << letter
-      #print letter
+      newString << letter     
     end
     index +=1
   end
   return newString
-  #puts newString
-  #puts newString2
-
 end
 
