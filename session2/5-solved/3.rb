@@ -103,3 +103,12 @@ class String
   end
 
 end
+
+# Gabe
+class String
+  def every_other_char
+    letters = self.split(//)
+    every_other_letter = letters.values_at(* letters.each_index.select {|i| i.even?})
+    every_other_letter.join
+  end
+end
