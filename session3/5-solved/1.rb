@@ -6,3 +6,10 @@ end
 def reverse_map(*array)
   array.reverse.map {|e| yield e}
 end
+
+#Sebastien
+def reverse_map(*array, &block) 
+	array.reverse.map do |e| 
+		block.call(e)
+	end
+end
