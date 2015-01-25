@@ -89,12 +89,15 @@ def ten_twenty(n)
   end
 end
 
+# Gabe
+def ten_twenty(n)
+  n % 2 == 0 ? 10 : 20
+end
+
 # Rizwan Ali
 if n.even?
     return 10
   elsif n.odd?
     return 20
   end
-
-
 
