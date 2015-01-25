@@ -10,3 +10,25 @@ def staircase(n)
 end
 
 
+<<<<<<< HEAD
+#================================
+#paul fitz & meads
+
+def staircase(n)
+	answer = Hash.new
+	evens = []
+	odds = []
+
+	1.upto(n) do |x|			#0 is even
+		evens << x if x.even?
+		odds << x if x.odd?
+	end
+	odds.each do |x|
+		answer[x] = evens.select do |y|
+			y if y < x 
+			end
+		end
+end
+
+=======
+>>>>>>> 202b3dbd049e0c7936f227c4ded6abc592242bd8
