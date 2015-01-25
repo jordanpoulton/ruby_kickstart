@@ -17,6 +17,40 @@
 
 
 
+require 'date'
+
+class User
+	attr_accessor :username
+
+	def initialize(username)
+		@username = username
+	end
+
+	def add_blog(date, text)
+	end
+
+	def blogs(array)
+		array.reverse
+	end
+end
+
+class Blog
+	attr_accessor :date
+	attr_accessor :user
+	attr_accessor :text
+	
+	def initialize(date, user, text)
+		@date = date
+		@user = user
+		@text = text
+	end
+
+	def summary
+	end
+end
+
+
+
 # ==========  EXAMPLE  ==========
 #
 # lissa = User.new 'QTSort'
@@ -63,7 +97,3 @@
 
 # date docs are at: http://ruby-doc.org/core/classes/Date.html
 # don't spend too much time worrying about them :)
-require 'date'
-
-class User
-end

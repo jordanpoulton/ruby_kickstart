@@ -8,7 +8,7 @@ end
 
 
 #=========================
-#paul fitz
+#paul fitz & meads
 
 def first_pos(string)
 	answer = Hash.new

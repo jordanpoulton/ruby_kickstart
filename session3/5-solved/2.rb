@@ -10,6 +10,7 @@ def staircase(n)
 end
 
 
+<<<<<<< HEAD
 #================================
 #paul fitz & meads
 
@@ -29,3 +30,5 @@ def staircase(n)
 		end
 end
 
+=======
+>>>>>>> 202b3dbd049e0c7936f227c4ded6abc592242bd8

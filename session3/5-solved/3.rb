@@ -4,6 +4,7 @@ def word_count(str)
   words
 end
 
+<<<<<<< HEAD
 #==============================
 #meads and paul
 
@@ -17,3 +18,12 @@ def word_count(string)
 	p words
 	answer
 end
+=======
+def word_count(string)
+  output = Hash.new 0
+  string.split.each do |word|
+    output[word.downcase] += 1
+  end
+  output
+end
+>>>>>>> 202b3dbd049e0c7936f227c4ded6abc592242bd8

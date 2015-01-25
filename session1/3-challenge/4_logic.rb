@@ -9,6 +9,9 @@
 # grade(4,  true)   # => "C"
 # grade(15, true)   # => "B"
 
+# <10 books => D, 10..20 books => C, >20 book =>B
+
+
 def grade(num_books, has_read_books)
 end
 
