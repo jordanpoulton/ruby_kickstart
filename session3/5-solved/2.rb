@@ -9,8 +9,6 @@ def staircase(n)
   to_return
 end
 
-
-<<<<<<< HEAD
 #================================
 #paul fitz & meads
 
@@ -25,10 +23,20 @@ def staircase(n)
 	end
 	odds.each do |x|
 		answer[x] = evens.select do |y|
-			y if y < x 
+			y if y < x
 			end
 		end
 end
 
-=======
->>>>>>> 202b3dbd049e0c7936f227c4ded6abc592242bd8
+#Sebastien
+def staircase(number)
+	newHash = Hash.new { |hash, key| hash[key] =[]  }
+	(1..number).each do |x|
+		newHash.delete_if{|key, val| key.even?}
+		if x.odd?
+			newHash[x] = (1..x).step(1).to_a.select { |e| e.even? }
+		end
+	end
+	return newHash
+end
+

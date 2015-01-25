@@ -26,5 +26,10 @@ def word_count(string)
 	answer
 end
 
-
+#Sebastien
+def word_count(string)
+	to_count = Hash.new { |hash, key| hash[key] = 0}
+	string.downcase.split(/ /).each { |word| to_count[word] += 1 }
+	return to_count
+end
 
