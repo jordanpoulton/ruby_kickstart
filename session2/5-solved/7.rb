@@ -61,3 +61,12 @@ def alternate_words(sentence)
   answer
 end
 
+#Yannick
+def alternate_words(string)
+  punction_free = string.gsub!(/[^0-9A-Za-z]/, ' ')
+  array = punction_free.split(" ")
+  result = []
+  array.each_index.select {|x| (x+1).odd?}.each{|x| result << array[x]}
+  result
+end
+

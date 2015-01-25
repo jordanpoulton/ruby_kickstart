@@ -74,6 +74,17 @@ def hi_hi_goodbye
   puts "goodbye"
 end
 
+#Yannick
+def hi_hi_goodbye
+answer = ""
+  while answer != "bye"
+  puts "Enter a number"
+  answer = gets.chomp
+  puts "hi " * answer.to_i
+  end
+  puts "goodbye"
+end
+
 
 
 hi_hi_goodbye if $0 == __FILE__  # a little magic so that you can run with "$ ruby 2_input_output_control.rb" but it will still work for our tests
