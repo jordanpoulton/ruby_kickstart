@@ -37,3 +37,17 @@ def odds_and_evens(string, return_odds)
   end
 answer
 end
+
+#Alex Parkinson
+def odds_and_evens(string, return_odds)
+  result = ""
+  string.length.times do |index|
+    next if 
+    return_odds == true && index.even?
+    next if 
+    return_odds == false && index.odd?
+    result << string[index]
+  end
+result
+end
+

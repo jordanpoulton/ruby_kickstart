@@ -23,3 +23,13 @@ def ten_twenty(n)
 end
 #==================
 
+
+# Alex Parkinson
+def ten_twenty(n)
+  if n.even?
+    return 10
+  else 
+    return 20
+  end
+end
+

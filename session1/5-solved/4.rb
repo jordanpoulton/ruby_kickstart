@@ -45,3 +45,17 @@ def grade(num_books, reads_books)
     return "B"
   end
 end
+
+
+#Alex Parkinson
+def grade(num_books, reads_books)
+  if reads_books == true
+    return "C" if num_books < 10
+    return "B" if num_books <= 20
+    return "A" if num_books > 20
+  else 
+    return "D" if num_books < 10
+    return "C" if num_books <= 20
+    return "B" if num_books > 20
+  end
+end
