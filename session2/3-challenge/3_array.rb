@@ -6,4 +6,5 @@
 # "".every_other_char         # => ""
 
 class String
+  
 end
