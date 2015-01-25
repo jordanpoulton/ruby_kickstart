@@ -1,5 +1,5 @@
 # Turns out that every object actually has 2 classes!
-# The one we've been using so far, and its singleton 
+# The one we've been using so far, and its singleton
 # class -- a class whose only instance is the object.
 
 # So an object is defined by its class, but it also
@@ -33,5 +33,8 @@ obj.singleton_methods # => [:greet, :about]
 # Question: if everything is an object, and every object
 #   has a singleton class, then do singleton classes have
 #   singleton classes?
-# 
+#
 #   How can you test your answer out?
+
+obj = Object.new
+puts obj.singleton_class.singleton_class # => #<Class:#<Class:#<Object:0x007fbd6210e3d0>>>

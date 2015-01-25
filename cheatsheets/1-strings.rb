@@ -1,6 +1,6 @@
-# This should get you started. 
+# This should get you started.
 # But to see all the cool things you can do, check out the documentation
-# 
+#
 # http://ruby-doc.org/core/classes/String.html
 
 
@@ -44,6 +44,7 @@ s               # => "abcdef"
 "abc"[3]            # => nil
 "abcdefg"[2..4]     # => "cde"
 "abcdefg"[4..-1]    # => "efg"
+"abcdefg"[2...4]     # => "cd"
 
 # Changing parts of a string
 message = "Josh said"

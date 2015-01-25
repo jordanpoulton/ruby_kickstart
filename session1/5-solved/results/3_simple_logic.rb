@@ -7,11 +7,11 @@
 # ten_twenty(5) # => 20
 # ten_twenty(6) # => 10
 
-#kevin lanzon
 def ten_twenty(n)
-  if n % 2 == 0 
+  if n % 2 == 0
     return 10
-  else 
+  else
     return 20
   end
 end
+
