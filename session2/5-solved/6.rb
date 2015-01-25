@@ -69,3 +69,15 @@ def prime_chars?(array)
   require 'prime'
   array.join.length.prime?
 end
+
+
+#kevin
+def prime_chars?(number)
+  answer = number.join.length # .join method returns a string created by converting each element of the array to a string
+  if answer < 2
+    return false
+  end
+  (2...answer).each do |n|
+    return false if answer % n == 0
+  end
+end
