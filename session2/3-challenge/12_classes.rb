@@ -20,9 +20,5 @@
 # f.to_s               # => "50/100"
 # f.to_f               # => 0.5
 
-class Fraction
-  def gcd(a,b)
-    return a if b == 0
-    gcd(b, a%b)
-  end
-end
+
+
