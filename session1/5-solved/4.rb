@@ -215,3 +215,19 @@ def grade(num_books, has_read_books)
     return "B" if num_books
   end
 end
+
+# Gabe
+def grade(num_books, reads_books)
+  if num_books < 10
+    num_grade = 0
+  elsif num_books <= 20
+    num_grade = 1
+  else
+    num_grade = 2
+  end
+
+  reads_books ? num_grade += 1 : num_grade
+
+  ["D","C","B","A"][num_grade]
+
+end
