@@ -4,6 +4,7 @@ def word_count(str)
   words
 end
 
+#Jordan
 def word_count(string)
   output = Hash.new 0
   string.split.each do |word|
