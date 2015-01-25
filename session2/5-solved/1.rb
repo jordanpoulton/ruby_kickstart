@@ -60,5 +60,12 @@ def sum_difference_product
   a + b 
 end
 
-
+# Rizwan Ali
+def sum_difference_product
+  a, b = gets.split.map! {|x| x.to_i}
+  
+  puts (a + b)
+  puts (a - b)
+  puts (a * b)
+end
 
