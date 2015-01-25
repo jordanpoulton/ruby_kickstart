@@ -23,15 +23,8 @@
 # GRANDMA:  HUH?! SPEAK UP, SONNY!
 # USER:     BYE
 
-<<<<<<< HEAD
-=======
 def deaf_grandma
 end
-
->>>>>>> 8a41904c71a942e96e272885400d9e06284b14dd
-
-
-
 
 # This will call your code so you can run it from the terminal.
 # But not call it otherwise, so that it will work with our tests.

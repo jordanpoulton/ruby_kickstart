@@ -83,3 +83,12 @@ def arithmetic2(a, b)
     (a.to_f) / 2  # Because they'll both be the same number
   end
 end
+
+# Sean Haughton
+def arithmetic2(a, b)
+	if a < b == true
+		return a / 2.0.to_f
+	else
+		return b / 2.0
+	end
+end

@@ -63,3 +63,9 @@ def prime_chars?(strings)
   end
   return true
 end
+
+#Yannick
+def prime_chars?(array)
+  require 'prime'
+  array.join.length.prime?
+end

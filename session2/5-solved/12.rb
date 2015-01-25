@@ -24,6 +24,34 @@ class Fraction
   end
 end
 
+#Jordan
+class Fraction
+
+  attr_accessor :numerator, :denominator
+
+  def initialize(numerator, denominator)
+    @numerator, @denominator = numerator, denominator
+  end
+
+  def to_s
+    "#{numerator}/#{denominator}"
+  end
+
+  def to_f
+    numerator.to_f / denominator.to_f
+  end
+
+  def lowest
+    common = gcd(numerator, denominator)
+    Fraction.new(numerator/common, denominator/common)
+  end
+
+  def gcd(a,b)
+    return a if b == 0
+    gcd(b, a%b)
+  end
+end
+
 
 #Sebastien
 class Fraction
@@ -51,6 +79,7 @@ class Fraction
     def to_s
       "#{numerator}/#{denominator}"
     end
+<<<<<<< HEAD
   
 end
 
@@ -85,3 +114,7 @@ attr_accessor :denominator
       gcd(b, a%b)
     end
 end
+=======
+
+end
+>>>>>>> 957a49424f53cb1f9a72406f6abc7d78c4fb0057

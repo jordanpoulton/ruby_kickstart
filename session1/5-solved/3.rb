@@ -79,3 +79,12 @@ end
 def ten_twenty(n)
   n.even? ? 10 : 20
 end
+
+# Sean Haughton
+def ten_twenty(n)
+  if n.odd?
+    return 20
+  else
+    return 10
+  end
+end
