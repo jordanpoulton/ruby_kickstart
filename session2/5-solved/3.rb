@@ -73,3 +73,13 @@ class String
     character
   end
 end
+
+#Yannick
+class String
+  def every_other_char
+  result = ''
+  array = self.chars
+    array.each_index.select {|x| (x+1).odd?}.each{|x| result << array[x]}
+    result
+  end
+end
