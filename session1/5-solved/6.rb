@@ -217,6 +217,15 @@ def odds_and_evens(string, return_odds)
   letters
 end
 
+
+# Gabe
+def odds_and_evens(string, return_odds)
+  letters = string.split(//); new_string = ""
+  letters.shift if return_odds                    # return_odds ? array.shift : array 
+  letters.each_with_index { |letter, i| i % 2 == 0 ? new_string << letter : next }
+  return new_string
+end
+
 # solved by Riz
 
 def odds_and_evens(string, return_odds)
@@ -233,4 +242,5 @@ def odds_and_evens(string, return_odds)
   end
   return newString
 end
+
 
