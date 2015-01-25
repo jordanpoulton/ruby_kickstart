@@ -1,3 +1,8 @@
 def reverse_map(*args, &block)
   args.reverse.map(&block)
 end
+
+#Jordan
+def reverse_map(*array)
+  array.reverse.map {|e| yield e}
+end

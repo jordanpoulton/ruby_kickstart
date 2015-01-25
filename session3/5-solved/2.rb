@@ -8,3 +8,17 @@ def staircase(n)
   end
   to_return
 end
+
+#Jordan
+def staircase(number)
+  output = {}
+  1.upto(number) do |num|
+    next if num.even?
+
+    array_of_all_numbers = Array.new(num) { |e| e+1 }
+    only_evens = array_of_all_numbers.select{|e| e.even?}
+
+    output[num] = only_evens
+  end
+  output
+end
