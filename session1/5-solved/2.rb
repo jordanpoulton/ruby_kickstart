@@ -92,3 +92,12 @@ def arithmetic2(a, b)
 		return b / 2.0
 	end
 end
+
+# Rizwan Ali
+def arithmetic2(a, b)
+	if a < b
+		return a/2.0
+	else 
+		b/2.0
+	end
+end
