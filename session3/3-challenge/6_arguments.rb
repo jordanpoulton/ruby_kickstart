@@ -17,39 +17,3 @@
 # match_maker true,  true,  true, true, nil     # => [false, true]
 # match_maker true,  true,  true, 0, nil        # => [false, true]
 
-def match_maker(first, *second)
-	truthy_falsey = []
-
-	#arr = second.each_slice(2).to_a
-	
-	if first == true 
-
-	truthy_falsey << second.each_slice(2).to_a.map do |x|
-
-			if x[0] != false && x[1] != false
-				false
-			elsif x[0] != true && x[1] != false || x[0] != false && x[1] !=true
-				true
-
-			else
-				false
-			end
-	end
-	end
-	
-	if first == false
-
-		truthy_falsey << arr.each do |x|
-			if x[0] != true && x[1] != true
-				true
-			elsif x[0] != true || x[1] != true
-				false
-			else 
-				false
-			end
-			end	
-			end
-			truthy_falsey[0]
-end
-puts match_maker(true,  true,  true   )    
-
