@@ -53,3 +53,35 @@ class Fraction
     end
   
 end
+
+#================================================
+#paul fitz
+
+class Fraction
+
+attr_accessor :numerator        #add attr_accessor so numerator and denominator can be changed
+attr_accessor :denominator
+
+  def initialize(numerator, denominator)  #initialize the object values
+    @numerator = numerator
+    @denominator = denominator
+  end
+
+  def lowest                              #use greatest common denominator to to nclude a method called lowest to return a new Fraction, where the numerator and denominator are reduced to lowest terms (ie 20/60 becomes 1/3)
+    number = gcd(numerator, denominator)
+    Fraction.new(numerator/number, denominator/number)
+  end
+
+  def to_s                            #method used to display numerator / denominator into a string
+    "#{numerator}/#{denominator}"
+  end
+
+  def to_f                            #method used to divide numerator by denominator and return this as a float
+    answer = numerator.to_f / denominator 
+  end
+
+    def gcd(a,b)
+      return a if b == 0
+      gcd(b, a%b)
+    end
+end
