@@ -3,8 +3,8 @@
 [1,2,3].map { 0 } # => [0, 0, 0]
 
 
-# A return statement in a method will from return it. But a return
-# statement in a proc will return from the enclosing environment.
+# A return statement in a method will return from it. But a return
+# statement in a proc will return **from the enclosing environment**.
 def first_even(nums)
   nums.each do |num|
     return num if num.even?

@@ -34,6 +34,7 @@ def get_squares(array)
   array.sort.select {|num| array.include? num*num}
 end
 
+<<<<<<< HEAD
 #kevin
 def get_squares(array)
   numbers = array.select do |square|
@@ -42,3 +43,11 @@ def get_squares(array)
   numbers.sort
 end
 
+=======
+#Yannick
+def get_squares(numbers)
+	squares = []
+	numbers.each {|x| numbers.include?(x**2) ? squares << x : nil}.sort
+	return squares
+end
+>>>>>>> 202b3dbd049e0c7936f227c4ded6abc592242bd8
