@@ -40,3 +40,12 @@ def get_squares(numbers)
 	numbers.each {|x| numbers.include?(x**2) ? squares << x : nil}.sort
 	return squares
 end
+
+#Costas
+def get_squares(num)
+	array = []
+	num.each do |n|
+	array << n if num.include?(n*n)
+	end
+	array.sort
+end

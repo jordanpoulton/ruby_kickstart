@@ -69,3 +69,11 @@ def sum_difference_product
   puts (a * b)
 end
 
+
+#Costas
+def sum_difference_product
+  a, b = gets.split.map {|n| n.to_i}
+  puts a + b
+  puts a - b
+  puts a * b
+end
