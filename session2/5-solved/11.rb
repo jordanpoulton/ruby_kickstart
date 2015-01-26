@@ -222,3 +222,93 @@ class BeerSong
   end
 end
 >>>>>>> 957a49424f53cb1f9a72406f6abc7d78c4fb0057
+
+
+# Tom Coakes
+class BeerSong
+
+  def initialize(initial_num)
+    if initial_num > 99
+      @initial_num = 99
+    elsif initial_num < 0
+      @initial_num = 0
+    else
+      @initial_num = initial_num
+    end
+  end
+
+  def num_to_text(num)
+    new_string = String.new
+
+    new_string << "ninety" if num == 90
+    new_string << "eighty" if num == 80
+    new_string << "seventy" if num == 70
+    new_string << "sixty" if num == 60
+    new_string << "fifty" if num == 50
+    new_string << "forty" if num == 40
+    new_string << "thirty" if num == 30
+    new_string << "twenty" if num == 20
+    new_string << "nineteen" if num == 19
+    new_string << "eighteen" if num == 18
+    new_string << "seventeen" if num == 17
+    new_string << "sixteen" if num == 16
+    new_string << "fifteen" if num == 15
+    new_string << "fourteen" if num == 14
+    new_string << "thirteen" if num == 13
+    new_string << "twelve" if num == 12
+    new_string << "eleven" if num == 11
+    new_string << "ten" if num == 10
+
+    if new_string.empty?
+      num.to_s.each_char do |char|
+        new_string << char.replace("one") if char == "1"
+        new_string << char.replace("two") if char == "2"
+        new_string << char.replace("three") if char == "3"
+        new_string << char.replace("four") if char == "4"
+        new_string << char.replace("five") if char == "5"
+        new_string << char.replace("six") if char == "6"
+        new_string << char.replace("seven") if char == "7"
+        new_string << char.replace("eight") if char == "8"
+        new_string << char.replace("nine") if char == "9"
+        new_string << char.replace("zero") if char == "0"
+      end
+    end
+
+    new_string = new_string.insert(4, "ty-") if num >= 91 && num <= 99
+    new_string = new_string.insert(5, "y-") if num >= 81 && num <= 89
+    new_string = new_string.insert(5, "ty-") if num >= 71 && num <= 79
+    new_string = new_string.insert(3, "ty-") if num >= 61 && num <= 69
+    new_string = new_string.sub('five', 'fifty-') if num >= 51 && num <= 59
+    new_string = new_string.sub('four', 'forty-') if num >= 41 && num <= 49
+    new_string = new_string.sub('three', 'thirty-') if num >= 31 && num <= 39
+    new_string = new_string.sub('two', 'twenty-') if num >= 21 && num <= 29
+
+    new_string.capitalize
+  end
+
+  def print_song
+    if @initial_num == 0
+      return
+    end
+
+    if @initial_num == 1
+      print "#{num_to_text(@initial_num)} bottle of beer on the wall,\n#{num_to_text(@initial_num)} bottle of beer,\nTake one down, pass it around,\nZero bottles of beer on the wall.\n"
+      return
+    end
+
+    while @initial_num >= 3
+      next_num = @initial_num - 1
+      print "#{num_to_text(@initial_num)} bottles of beer on the wall,\n#{num_to_text(@initial_num)} bottles of beer,\nTake one down, pass it around,\n#{num_to_text(next_num)} bottles of beer on the wall.\n"
+      @initial_num -= 1
+    end
+
+    next_num = @initial_num - 1
+
+    print "#{num_to_text(@initial_num)} bottles of beer on the wall,\n#{num_to_text(@initial_num)} bottles of beer,\nTake one down, pass it around,\n#{num_to_text(next_num)} bottle of beer on the wall.\n"
+
+    @initial_num -= 1
+    next_num = @initial_num - 1
+
+    print "#{num_to_text(@initial_num)} bottle of beer on the wall,\n#{num_to_text(@initial_num)} bottle of beer,\nTake one down, pass it around,\n#{num_to_text(next_num)} bottles of beer on the wall.\n"
+  end
+end

@@ -118,3 +118,36 @@ end
 
 end
 >>>>>>> 957a49424f53cb1f9a72406f6abc7d78c4fb0057
+
+
+# Tom Coakes
+class Fraction
+  
+  attr_accessor :numerator, :denominator
+
+  def initialize(numerator, denominator)
+    @numerator = numerator
+    @denominator = denominator
+  end
+  
+  def to_s
+    "#{@numerator}/#{@denominator}"
+  end
+
+  def to_f
+    (@numerator.to_f / @denominator.to_f)
+  end
+
+  def gcd(a,b)
+    return a if b == 0
+    gcd(b, a%b)
+  end
+
+  def lowest
+    common = gcd(@numerator, @denominator)
+    @numerator = @numerator / common
+    @denominator = @denominator / common
+    # Need to return a non-string version of "1/3"
+    Fraction.new(@numerator, @denominator)
+  end
+end

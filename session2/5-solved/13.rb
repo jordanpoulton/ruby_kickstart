@@ -131,3 +131,46 @@ class Blog
     self.text == other.text
   end
 end
+
+
+# Tom Coakes
+require 'date'
+
+class User
+  attr_accessor :username, :blogs
+
+  def initialize(username)
+    @username = username
+    @blogs = []
+  end
+
+  def add_blog(date, text)
+    blog1 = Blog.new(date, @username, text)
+    blogs << blog1
+    @blogs = blogs.sort_by { |blog| blog.date }.reverse
+    blog1
+  end
+end
+
+class Blog
+  attr_accessor :date, :user, :text
+
+  def initialize(date, user, text)
+    @date = date
+    @user = user
+    @text = text
+  end
+
+  def summary
+    @text.split(' ')[0..9].join(' ')
+  end
+
+  def entry
+    return "#{@user.username} #{@date}\n#{@text}"
+  end
+
+  def ==(other)
+    return date == other.date && user == other.user && text == other.text
+  end
+
+end
