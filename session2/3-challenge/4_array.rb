@@ -7,15 +7,12 @@
 # get_squares [25, 4, 9, 6, 50, 16, 5] # => [4, 5]
 
 # This time you will have to define the method, it's called: get_squares
-def get_squares(num)
-	array = num
-	array.sort -
-	print array
-	
+def get_squares(array)
+  matches = []
+  array.each do |x|
+    if array.include? x ** 2
+      matches << x
+    end
+  end
+  matches.sort
 end
-
-
-get_squares [9]                      # => []
-#get_squares [9,3]                    # => [3]
-#get_squares [9,3,81]                 # => [3, 9]
-get_squares [25, 4, 9, 6, 50, 16, 5] # => [4, 5]
