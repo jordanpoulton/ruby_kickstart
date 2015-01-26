@@ -17,3 +17,4 @@ end
 clarinet = Instrument.new 'Clarinet', 250
 clarinet.name   # => "Clarinet"
 clarinet.price  # => 250
+

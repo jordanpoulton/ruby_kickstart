@@ -19,6 +19,7 @@
 # Then make a public method called print_song that outputs all stanzas from the number of bottles of beer down to zero.
 # Add any additional methods you find helpful.
 
+<<<<<<< HEAD
 
 
 
@@ -28,4 +29,11 @@
 #puts b.instance_variable_get '@numBottles'
 
 
+=======
+class BeerSong
+end
+
+
+
+>>>>>>> upstream/master
 
