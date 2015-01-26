@@ -7,4 +7,11 @@
 # got_three? [1, 2, 1, 1]     # => false
 
 def got_three?(array)
+  result = false
+  array.each_with_index do |x, i|
+    if x == array[i+1] && array[i+1] == array[i+2]
+      result = true
+    end
+  end
+  result
 end
