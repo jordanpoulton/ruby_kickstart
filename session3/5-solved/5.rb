@@ -28,3 +28,19 @@ def spiral_access(arrays, iteration=0, &block)
   # recursive step
   spiral_access arrays, iteration+1, &block
 end
+
+#========Meads============
+def spiral_access(arr, &block)
+  return if arr[0].nil? || arr.flatten.empty? == true || arr.length == 0 #base cases when the array has no more multi arrays left.
+  len = arr[0].length
+  0.upto(len-1) do |x|
+      block.call arr[0][x] #for each individual number append to the array in the block
+    end
+  arr.shift#removes the first element of the array
+  arr = arr.transpose.reverse#rotates the array -90 degrees
+  spiral_access(arr, &block)#calls the method again to repeat
+  end
+#===============================
+
+
+
