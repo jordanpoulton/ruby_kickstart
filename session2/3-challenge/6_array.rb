@@ -17,3 +17,15 @@
 
 def got_three?(input)
 end
+
+def prime_chars?(array)
+  # count characters
+  count = 0
+  array.each { |string| count += string.length }
+  ('1' * count) !~ /^1?$|^(11+?)\1+$/ ? true : false
+end
+  # check if prime
+p prime_chars? ['abcd']           
+p prime_chars? ['ab', 'cd']    
+p prime_chars? ['a', 'bcd']    
+p prime_chars? ['a', 'b', 'cd']
