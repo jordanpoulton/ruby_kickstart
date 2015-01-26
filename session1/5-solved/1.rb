@@ -24,6 +24,7 @@ def arithmetic1(n)
 end
 #============
 
+
 #Sebastien
 def arithmetic1(n)
  	n * 5 - 20
@@ -75,5 +76,10 @@ end
 
 def arithmetic1(n)
 	return (n * 5) - 20
+end
+
+#Alex Parkinson
+def arithmetic1(n)
+  (n * 5) - 20
 end
 

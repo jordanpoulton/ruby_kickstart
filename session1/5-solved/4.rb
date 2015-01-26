@@ -58,6 +58,7 @@ def grade(num_books, reads_books)
   end
 end
 
+
 #Costas
 def grade(num_books, has_read_books)
   if has_read_books == false
@@ -248,7 +249,7 @@ def grade(num_books, has_read_books)
 
   if num_books >20 && has_read_books === true
     return "A"
-  elsif 
+  elsif
     num_books >20 && has_read_books == false
     return "B"
   end
@@ -262,7 +263,7 @@ def grade(num_books, has_read_books)
 		return "C"
 	elsif num_books < 10 && has_read_books == false
 		return "D"
-	elsif num_books <= 20 && has_read_books == true	
+	elsif num_books <= 20 && has_read_books == true
 		return "B"
 	elsif num_books  <= 20 && has_read_books == false
 		return "C"
@@ -273,4 +274,18 @@ def grade(num_books, has_read_books)
 	end
 end
 
+
+
+#Alex Parkinson
+def grade(num_books, reads_books)
+  if reads_books == true
+    return "C" if num_books < 10
+    return "B" if num_books <= 20
+    return "A" if num_books > 20
+  else
+    return "D" if num_books < 10
+    return "C" if num_books <= 20
+    return "B" if num_books > 20
+  end
+end
 
