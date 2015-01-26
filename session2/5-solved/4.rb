@@ -49,3 +49,15 @@ def get_squares(num)
 	end
 	array.sort
 end
+
+
+# Tom Coakes
+def get_squares(array)
+  sorted_array = []
+  array.each do |num|
+    if array.include?(num ** 2)
+      sorted_array << num
+    end
+  end
+  sorted_array.sort
+end

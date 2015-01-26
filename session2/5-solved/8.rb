@@ -45,3 +45,15 @@ def got_three?(array)
 	return false
 end
 
+
+# Tom Coakes
+def got_three?(array)
+
+  array.each_cons(3) do |a, b, c|
+    if a == b && a == c
+      return true
+    end
+  end
+
+  false
+end

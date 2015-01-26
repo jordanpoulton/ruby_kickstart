@@ -115,3 +115,17 @@ class String
     array
   end
 end
+
+
+# Tom Coakes
+class String
+  def every_other_char
+    input_array = self.split('')
+    new_array = input_array.each_with_index.map do |char, index|
+      if  index.even?
+        char
+      end
+    end
+    new_array.join
+  end
+end
