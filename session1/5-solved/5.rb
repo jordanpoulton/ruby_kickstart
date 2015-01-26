@@ -78,3 +78,9 @@ end
 def add_more_ruby(string)
 	string.gsub(/[Ss]ad/, 'sad' => 'happy', 'Sad' => 'Happy')
 end
+
+#Alex Parkinson
+def add_more_ruby(string)
+	string.gsub("sad", "happy").gsub("Sad", "Happy")
+end
+
