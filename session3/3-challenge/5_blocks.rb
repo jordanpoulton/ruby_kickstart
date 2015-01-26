@@ -13,24 +13,30 @@ two_d = [
  ]
 # order = []
 # spiral_access two_d do |i|
-#   order << i
-# end
+#    order << i
+#  end
 # order # => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
- @order = []
-def spiral_access(*arr, &block)
-  arr = arr[0]
-  return @order if arr.length == 0
-  arr.each do |i| @order << i end
-
-  #@order << arr[0]
-  arr.shift
-  arr = arr.transpose.reverse
-  spiral_access arr
+order = []
+def spiral_access(arr, &block)
+  return if arr[0].nil? || arr.flatten.empty? == true || arr.length == 0 #base cases when the array has no more multi arrays left.
+  len = arr[0].length
+  0.upto(len-1) do |x|
+      block.call arr[0][x] #for each individual number append to the array in the block
+    end
+  arr.shift#removes the first element of the array
+  arr = arr.transpose.reverse#rotates the array -90 degrees
+  spiral_access(arr, &block)#calls the method again to repeat
   end
 
 
-p spiral_access two_d do |i|
-   @order << i
- end
+one_d = [[1,2],[4,3]]
+ #spiral_access([[]]) { raise "You invoked the block" }
+
+spiral_access one_d do |i|
+    order << i
+   p order
+   end
+
+
 
 
