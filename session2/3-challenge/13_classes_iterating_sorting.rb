@@ -60,4 +60,11 @@
 
 
 # date docs are at: http://ruby-doc.org/core/classes/Date.html
+<<<<<<< HEAD
 # don't spend too much time worrying about them :)
+require 'date'
+
+
+=======
+# don't spend too much time worrying about them :)
+>>>>>>> upstream/master

@@ -24,6 +24,15 @@ class Fraction
   end
 end
 
+<<<<<<< HEAD
+#==============Meads==============
+class Fraction
+  attr_accessor :numerator, :denominator
+
+  def initialize (numerator, denominator)
+    @denominator = denominator
+    @numerator =  numerator
+=======
 #Jordan
 class Fraction
 
@@ -44,10 +53,17 @@ class Fraction
   def lowest
     common = gcd(numerator, denominator)
     Fraction.new(numerator/common, denominator/common)
+>>>>>>> upstream/master
   end
 
   def gcd(a,b)
     return a if b == 0
+<<<<<<< HEAD
+    gcd(b, a%b)#recursion being used here.
+  end
+
+  def to_s#this is overriding the usualy to_s method with this one hence puts is using this to_s
+=======
     gcd(b, a%b)
   end
 end
@@ -131,10 +147,23 @@ class Fraction
   end
   
   def to_s
+>>>>>>> upstream/master
     "#{@numerator}/#{@denominator}"
   end
 
   def to_f
+<<<<<<< HEAD
+    @numerator.to_f / @denominator.to_f
+  end
+
+  def lowest
+    gcommon = gcd(@numerator, @denominator)
+    Fraction.new(@numerator / gcommon,@denominator / gcommon)
+  end
+
+end
+#====================
+=======
     (@numerator.to_f / @denominator.to_f)
   end
 
@@ -151,3 +180,4 @@ class Fraction
     Fraction.new(@numerator, @denominator)
   end
 end
+>>>>>>> upstream/master
