@@ -55,3 +55,14 @@ def pirates_say_arrrrrrrrr(string)
   end
   return_letter
 end
+
+#Tommaso
+def pirates_say_arrrrrrrrr(string)
+  string_ary = ''
+  next_char = false
+  string.size.times do |i|
+    string_ary << string[i] if next_char
+    next_char = string[i] == 'r' || string[i] == 'R'
+ end
+ string_ary
+end
