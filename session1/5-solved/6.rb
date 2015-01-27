@@ -62,14 +62,14 @@ def odds_and_evens(string, return_odds)
   if return_odds == true
     stringArray.each_with_index do |v,k|
       if k%2!=0
-        newString<<v
+        newString << v
       end
 
       end
     else
       stringArray.each_with_index do |v,k|
         if k%2==0
-          newString<<v
+          newString << v
         end
 
         end
@@ -78,3 +78,13 @@ def odds_and_evens(string, return_odds)
   return newString
 end
 
+
+#Tommaso
+string_return = ''
+  string.length.times do |i|
+    next if return_odds == true && i.even? == true
+    next if return_odds == false && i.odd? == true
+    string_return << string[i]
+  end
+  string_return
+end

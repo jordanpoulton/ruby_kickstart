@@ -43,4 +43,14 @@ def arithmetic2(a, b)
 end
 
 
+#Tommaso
+def arithmetic2(a, b)
+  if a < b
+   a / 2.0
+  else b < a
+   b / 2.0
+  end
+end
+
+
 
