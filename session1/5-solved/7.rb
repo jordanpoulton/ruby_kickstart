@@ -132,7 +132,6 @@ def pirates_say_arrrrrrrrr(string)
   character
 end
 
-
 # Tom Coakes
 def pirates_say_arrrrrrrrr(string)
   new_string = ""
@@ -148,3 +147,53 @@ def pirates_say_arrrrrrrrr(string)
 
   return new_string
 end
+
+# Sean Haughton
+def pirates_say_arrrrrrrrr(string)
+  new_string = String.new
+  string.chars.each_with_index do |letter, index|
+
+      new_string << string[index+1].to_s if letter == "r" || letter == "R"
+      end
+  new_string
+end
+
+# Gabe
+def pirates_say_arrrrrrrrr(string)
+  letters_array = string.split(//)
+  return_string = ""
+  letters_array.each_with_index do |letter, index|
+    next if index == string.length - 1
+    return_string << string[index + 1] if letter.downcase == 'r'
+  end
+  return_string
+end
+
+#solved by Riz
+
+def pirates_say_arrrrrrrrr(string)
+  newString = ""
+  index = 0
+  add_next = false
+  string = string.split("").each do |letter|
+    if letter == "r" || letter =="R"
+      if index + 1 < string.size
+        add_next= index + 1
+        newString << string[add_next]
+      end
+    end
+  end
+end
+
+#Guido
+
+def pirates_say_arrrrrrrrr(string)
+  str = ""  
+  string.length.times do |i|
+	  if string[i] == "R" || string[i] == "r"
+		  str << string[i + 1].to_s
+          end
+  end
+ str
+end
+

@@ -61,3 +61,26 @@ def alternate_words(sentence)
   answer
 end
 
+#Yannick
+def alternate_words(string)
+  punction_free = string.gsub!(/[^0-9A-Za-z]/, ' ')
+  array = punction_free.split(" ")
+  result = []
+  array.each_index.select {|x| (x+1).odd?}.each{|x| result << array[x]}
+  result
+end
+
+
+# Tom Coakes
+def alternate_words(string)
+  final_array = []
+
+  no_punctuation = string.gsub(/[!@$#%^&*()-=_+:;,.<>?|]/, ' ')
+  split_string = no_punctuation.split(' ')
+
+  split_string.each_slice(2) do |word1, word2|
+      final_array << word1
+  end
+
+  final_array
+end

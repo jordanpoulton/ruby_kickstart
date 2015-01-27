@@ -52,3 +52,44 @@ def sum_difference_product
   puts a - b
   puts a * b
 end
+
+#Yannick
+def sum_difference_product
+  a = gets.chomp
+  b = gets.chomp
+  a + b 
+end
+
+# Rizwan Ali
+def sum_difference_product
+  a, b = gets.split.map! {|x| x.to_i}
+  
+  puts (a + b)
+  puts (a - b)
+  puts (a * b)
+end
+
+
+#Costas
+def sum_difference_product
+  a, b = gets.split.map {|n| n.to_i}
+  puts a + b
+  puts a - b
+  puts a * b
+end
+
+
+# Tom Coakes
+def sum_difference_product
+  str_input = gets.chomp
+  
+  int_input = str_input.split(' ').map { |str| str.to_i }
+
+  sum = int_input[0] + int_input[1]
+  difference = (int_input[0] - int_input[1])
+  product = int_input[0] * int_input[1]
+
+  result = "#{sum}\n#{difference}\n#{product}\n"
+
+  print result
+end

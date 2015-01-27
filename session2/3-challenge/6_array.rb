@@ -14,22 +14,6 @@
 # prime_chars? ['ab', 'cd']       # => false
 # prime_chars? ['a', 'bcd']       # => false
 # prime_chars? ['a', 'b', 'cd']   # => false
-<<<<<<< HEAD
+
 def got_three?(input)
- 	input.each_cons(3) do |a, b, c|
- 		if a == b && b == c
- 			return true 
- 	end
- end
- 
- 	
- 
-end 
-
-puts got_three?(["abbbcdeeed"])
-=======
-
-def prime_chars?(array)
 end
-
->>>>>>> 82aff02e8d9149d18069a3e52ff65d313023b1fc

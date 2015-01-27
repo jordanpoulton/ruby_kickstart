@@ -36,3 +36,24 @@ def got_three?(input)
 	end
 	return false
 end
+
+#Yannick
+def got_three?(array)
+	array.each_cons(3) do |a, b, c|
+		return true if a == b && a == c
+	end
+	return false
+end
+
+
+# Tom Coakes
+def got_three?(array)
+
+  array.each_cons(3) do |a, b, c|
+    if a == b && a == c
+      return true
+    end
+  end
+
+  false
+end

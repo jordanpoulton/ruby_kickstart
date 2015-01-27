@@ -73,3 +73,59 @@ class String
     character
   end
 end
+
+#Yannick
+class String
+  def every_other_char
+  result = ''
+  array = self.chars
+    array.each_index.select {|x| (x+1).odd?}.each{|x| result << array[x]}
+    result
+  end
+end
+
+# solved by Riz
+class String
+  def every_other_char
+    array = ''
+    index = 0
+
+    letters = self.split("").each do |letter|
+     
+      array << letter if index.even?
+  
+      print array
+      index += 1
+      
+    end
+    return array
+    
+  end
+
+end
+
+
+#Costas
+class String
+  def every_other_char
+    array = ''
+    self.chars.each_with_index do |c, index|
+      array << c if index.even? == true
+    end
+    array
+  end
+end
+
+
+# Tom Coakes
+class String
+  def every_other_char
+    input_array = self.split('')
+    new_array = input_array.each_with_index.map do |char, index|
+      if  index.even?
+        char
+      end
+    end
+    new_array.join
+  end
+end

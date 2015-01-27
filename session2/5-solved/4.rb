@@ -33,3 +33,31 @@ end
 def get_squares(array)
   array.sort.select {|num| array.include? num*num}
 end
+
+#Yannick
+def get_squares(numbers)
+	squares = []
+	numbers.each {|x| numbers.include?(x**2) ? squares << x : nil}.sort
+	return squares
+end
+
+#Costas
+def get_squares(num)
+	array = []
+	num.each do |n|
+	array << n if num.include?(n*n)
+	end
+	array.sort
+end
+
+
+# Tom Coakes
+def get_squares(array)
+  sorted_array = []
+  array.each do |num|
+    if array.include?(num ** 2)
+      sorted_array << num
+    end
+  end
+  sorted_array.sort
+end

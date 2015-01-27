@@ -63,3 +63,24 @@ def prime_chars?(strings)
   end
   return true
 end
+
+#Yannick
+def prime_chars?(array)
+  require 'prime'
+  array.join.length.prime?
+end
+
+
+# Tom Coakes
+def prime_chars?(array)
+  sum = array.join.length
+
+  return false if array.empty?
+  return false if sum == 0 || sum == 1
+
+  (2...sum).each do |num|
+    if sum % num == 0
+      return false
+    end
+  end
+end
