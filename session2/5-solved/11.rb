@@ -368,3 +368,86 @@ class BeerSong
   end
 end
 >>>>>>> upstream/master
+
+# Yannick
+
+class BeerSong
+
+  attr_accessor :bottles
+
+    NUMBERS = {
+    1=> "one",
+    2=> "two",
+    3=> "three",
+    4=> 'four',
+    5=> "five",
+    6=> "six",
+    7=> "seven",
+    8=> "eight",
+    9=> "nine",
+    10=> "Ten"
+  }
+
+  TEENS = {
+    11=> "Eleven",
+    12=> "Twelve",
+    13=> "Thirteen",
+    14=> "Fourteen",
+    15=> "Fifteen",
+    16=> "Sixteen",
+    17=> "Seventeen",
+    18=> "Eighteen",
+    19=> "Nineteen",
+    20=> "Twenty"
+  }
+
+  TENS = {
+    0=> "Zero",
+    10=> "Ten",
+    20=> "Twenty",
+    30=> "Thirty",
+    40=> "Forty",
+    50=> "Fifty",
+    60=> "Sixty",
+    70=> "Seventy",
+    80=> "Eighty",
+    90=> "Ninety"
+  }
+
+  def initialize(beers)
+    @beers = beers
+      @beers = 0 if beers < 0
+      @beers = 99 if beers > 99
+    end
+
+    def translate(n)
+        return  TENS[0] if n == 0
+        if 0 < n && n < 11
+          NUMBERS[n]
+        elsif 10 < n && n < 21
+          TEENS[n]
+        elsif n % 10 == 0
+          TENS[n]
+        else
+          return "#{translate ((n/10)*10)}-#{translate n%10}"
+        end
+    end
+
+    def stanza(beers)
+        puts "#{translate(beers).capitalize} #{bottle_s(beers)} of beer on the wall,"
+        puts "#{translate(beers).capitalize} #{bottle_s(beers)} of beer,"
+        puts "Take one down, pass it around,"
+        puts "#{translate(beers-1).capitalize} #{bottle_s(beers-1)} of beer on the wall."
+    end
+
+    def bottle_s(n)
+    n == 1 ? "bottle" : "bottles"
+    end
+
+    def print_song
+        @beers.downto 1 do |n|
+        stanza(n)
+        end
+    end
+end
+

@@ -174,3 +174,51 @@ class Blog
   end
 
 end
+
+# Yannick
+
+class User
+
+  attr_accessor :username, :blog
+
+  def initialize(username)
+    @username = username
+    @blogs = []
+  end
+
+  def add_blog(date, text)
+    new_blog = Blog.new(date, self, text)
+    @blogs << new_blog
+    new_blog
+
+  end
+
+  def blogs
+    @blogs.sort_by {|blog| blog.date}.reverse
+  end
+
+end
+
+class Blog
+
+  attr_accessor :date, :user, :text
+  
+  def initialize(date, user, text)
+    @date, @user, @text = date, user, text
+  end
+
+  def summary
+    @text.split(' ')[0..9].join(' ')
+  end
+
+  def entry
+    "#{@User.username} #{@date}\n#{@text}"
+  end
+
+  def ==(other)
+    date == other.date &&
+    user == other.user &&
+    text == other.text
+  end
+
+end
