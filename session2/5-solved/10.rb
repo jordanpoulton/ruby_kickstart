@@ -69,8 +69,10 @@ end
 	end
 end
 
+
 # Gabe
 class Person
+
   def initialize(name, age)
     @name = name
     @age = age
@@ -82,4 +84,21 @@ class Person
   def birthday
     @age += 1
   end
+  
 end
+
+# Tom Coakes
+class Person
+  
+  attr_accessor :name, :age
+
+  def initialize(name, age)
+    @name = name
+    @age = age
+  end
+
+  def birthday
+    @age = @age + 1
+  end
+end
+

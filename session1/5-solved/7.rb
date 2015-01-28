@@ -184,3 +184,16 @@ def pirates_say_arrrrrrrrr(string)
     end
   end
 end
+
+#Guido
+
+def pirates_say_arrrrrrrrr(string)
+  str = ""  
+  string.length.times do |i|
+	  if string[i] == "R" || string[i] == "r"
+		  str << string[i + 1].to_s
+          end
+  end
+ str
+end
+

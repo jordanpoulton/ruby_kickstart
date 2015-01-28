@@ -22,7 +22,22 @@ def deaf_grandma
   end
 end
 
+#=================Meads=========
 def deaf_grandma
+<<<<<<< HEAD
+  while line = gets.chomp
+    break if line == 'BYE'
+    if line == line.upcase && line.empty? == false ##logic is that if input is not empty and text is upcase then puts this.
+      puts 'NO, NOT SINCE 1938!'
+    else
+      puts 'HUH?! SPEAK UP, SONNY!' #all other cases, inlcuding a blank line do this.
+    end
+  end
+end
+#==============================
+
+
+=======
 	while line = gets.chomp
 		break if line == 'BYE'
 		if line == line.upcase && line.empty? == false #logic is that if inptut is not empty and text is upcase then puts this.
@@ -39,6 +54,7 @@ class String
     self == self.upcase ? true : false
   end
 end
+>>>>>>> upstream/master
 
 def deaf_grandma
   while (input = gets.chomp) && ( input !~ /BYE/)
@@ -65,6 +81,7 @@ def deaf_grandma
 end
 end
 
+
 # Gabe
 def deaf_grandma
   input = "not bye"
@@ -73,9 +90,21 @@ def deaf_grandma
     if input == "BYE"
       break
     elsif input == input.upcase && input.length != 0
+    end
+  end
+end
+
+# Tom Coakes
+def deaf_grandma
+  while true
+    input = gets.chomp
+    if input == "BYE"
+      break
+    elsif input.upcase == input && input != ''
       puts "NO, NOT SINCE 1938!"
     else
       puts "HUH?! SPEAK UP, SONNY!"
     end
   end
+
 end

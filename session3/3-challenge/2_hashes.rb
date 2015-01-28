@@ -9,6 +9,11 @@
 # staircase 5  # => {1 => [], 3 => [2], 5 =>[2, 4]}
 
 
+<<<<<<< HEAD
+
+
+
+=======
 #Jordan
 def staircase(number)
   output = {}
@@ -22,3 +27,4 @@ def staircase(number)
   end
   output
 end
+>>>>>>> 202b3dbd049e0c7936f227c4ded6abc592242bd8

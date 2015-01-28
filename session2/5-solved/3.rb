@@ -104,11 +104,38 @@ class String
 
 end
 
+
 # Gabe
 class String
   def every_other_char
     letters = self.split(//)
     every_other_letter = letters.values_at(* letters.each_index.select {|i| i.even?})
     every_other_letter.join
+  end
+end
+
+
+#Costas
+class String
+  def every_other_char
+    array = ''
+    self.chars.each_with_index do |c, index|
+      array << c if index.even? == true
+    end
+    array
+  end
+end
+
+
+# Tom Coakes
+class String
+  def every_other_char
+    input_array = self.split('')
+    new_array = input_array.each_with_index.map do |char, index|
+      if  index.even?
+        char
+      end
+    end
+    new_array.join
   end
 end

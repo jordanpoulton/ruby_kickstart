@@ -33,6 +33,7 @@ def arithmetic2(a, b)
 end
 #===================
 
+
 #Sebastien
 def arithmetic2(a, b)
 	if a < b
@@ -95,20 +96,39 @@ end
 
 # Gabe
 def arithmetic2(a,b)
-  
+
   if a < b
     a/2.0
-  
+
   else
     b/2.0
-  
+
   end
 
 # Rizwan Ali
 def arithmetic2(a, b)
 	if a < b
 		return a/2.0
-	else 
+	else
 		b/2.0
+	end
+end
+
+#Guido
+
+def arithmetic2(a, b)
+	if a < b
+		return (a / 2.0)
+	else
+		return (b / 2.0)
+	end
+end
+
+#Alex Parkinson
+def arithmetic2(a, b)
+	if a < b
+		return a / 2.0
+	else
+		return b / 2.0
 	end
 end

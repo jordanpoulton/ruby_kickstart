@@ -221,7 +221,7 @@ end
 # Gabe
 def odds_and_evens(string, return_odds)
   letters = string.split(//); new_string = ""
-  letters.shift if return_odds                    # return_odds ? array.shift : array 
+  letters.shift if return_odds                    # return_odds ? array.shift : array
   letters.each_with_index { |letter, i| i % 2 == 0 ? new_string << letter : next }
   return new_string
 end
@@ -236,7 +236,7 @@ def odds_and_evens(string, return_odds)
       newString << letter
     end
     if index.odd? && return_odds == true
-      newString << letter     
+      newString << letter
     end
     index +=1
   end
@@ -244,3 +244,33 @@ def odds_and_evens(string, return_odds)
 end
 
 
+
+#Guido
+
+def odds_and_evens(string, return_odds)
+	str = ""
+	string.length.times do |i|
+		if return_odds
+		  next if i % 2 == 0
+		  str << string[i]
+		else
+		  next if i % 2 != 0
+		  str << string[i]
+		end
+	end
+			str
+end
+
+#This can definitely be refactored!!
+#Alex Parkinson
+def odds_and_evens(string, return_odds)
+  result = ""
+  string.length.times do |index|
+    next if
+    return_odds == true && index.even?
+    next if
+    return_odds == false && index.odd?
+    result << string[index]
+  end
+result
+end

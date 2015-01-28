@@ -36,7 +36,23 @@ def mod_three(array)
 	array.select {|x| x % 3 != 0}. map{|x| x % 3}
 end
 
+
 # Gabe
 def mod_three(array)
   remainders = array.map { |number| number % 3} - [0]
+end
+
+
+#Costas
+def mod_three(array)
+	array.select {|n| n % 3 != 0}.map{|n| n % 3}
+end
+
+
+# Tom Coakes
+def mod_three(array)
+  new_array = array.map do |num|
+    num % 3 if num % 3 != 0
+  end
+  new_array.compact
 end
