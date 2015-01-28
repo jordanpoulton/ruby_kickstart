@@ -118,3 +118,34 @@ end
 
 end
 >>>>>>> 957a49424f53cb1f9a72406f6abc7d78c4fb0057
+
+# Gabe
+class Fraction
+
+  def initialize(numerator, denominator)
+    @numerator = numerator
+    @denominator = denominator
+  end
+
+  attr_accessor :numerator
+  attr_accessor :denominator
+
+  def to_f
+    @numerator / @denominator.to_f
+  end
+
+  def to_s
+    @numerator.to_s + "/" + @denominator.to_s
+  end
+
+  def lowest
+    gcd = gcd(@denominator, @numerator)
+    Fraction.new(@numerator/gcd, @denominator/gcd)
+  end
+
+  def gcd(a,b)
+    return a if b == 0
+    gcd(b, a%b)
+  end
+
+end

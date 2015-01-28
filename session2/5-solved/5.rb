@@ -35,3 +35,8 @@ end
 def mod_three(array)
 	array.select {|x| x % 3 != 0}. map{|x| x % 3}
 end
+
+# Gabe
+def mod_three(array)
+  remainders = array.map { |number| number % 3} - [0]
+end

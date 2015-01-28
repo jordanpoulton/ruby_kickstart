@@ -222,3 +222,73 @@ class BeerSong
   end
 end
 >>>>>>> 957a49424f53cb1f9a72406f6abc7d78c4fb0057
+
+# Gabe
+
+class BeerSong
+  def initialize(initial_beers)
+    if initial_beers < 0
+      @beers = 0
+    elsif initial_beers > 99
+      @beers = 99
+    else
+      @beers = initial_beers
+    end
+  end
+
+  def print_song
+    while @beers != 0
+      puts "#{eng_n(@beers)} bottle#{plural?} of beer on the wall,\n#{eng_n(@beers)} bottle#{plural?} of beer,\nTake one down, pass it around,"
+      @beers -= 1
+      puts "#{eng_n(@beers)} bottle#{plural?} of beer on the wall."
+    end
+  end
+
+  def plural?
+    return "s" if @beers != 1 
+  end
+
+end
+
+  NUMBERS = {
+    0=> "Zero",
+    1=> "one",
+    2=> "two",
+    3=> "three",
+    4=> 'four',
+    5=> "five",
+    6=> "six",
+    7=> "seven",
+    8=> "eight",
+    9=> "nine",
+    10=> "Ten",
+    11=> "Eleven",
+    12=> "Twelve",
+    13=> "Thirteen",
+    14=> "Fourteen",
+    15=> "Fifteen",
+    16=> "Sixteen",
+    17=> "Seventeen",
+    18=> "Eighteen",
+    19=> "Nineteen",
+    20=> "Twenty" }
+
+  TENS = {
+    20=> "Twenty",
+    30=> "Thirty",
+    40=> "Forty",
+    50=> "Fifty",
+    60=> "Sixty",
+    70=> "Seventy",
+    80=> "Eighty",
+    90=> "Ninety" }
+
+def eng_n(number)
+  if number <= 20
+    NUMBERS[number].capitalize
+  elsif number % 10 == 0
+    TENS[number]
+  else
+    TENS[number - (number % 10)] + "-" + NUMBERS[number % 10]
+  end
+end

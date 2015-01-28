@@ -8,15 +8,3 @@
 # alternate_words("Lorem ipsum dolor sit amet.")  # => ["Lorem", "dolor", "amet"]
 # alternate_words("Can't we all get along?")      # => ["Can't", "all", "along"]
 # alternate_words("Elementary, my dear Watson!")  # => ["Elementary", "dear"]
-
-
-def alternate_words(string)
-end
-
-def alternate_words(string)
-  # replace non-considered characters with spaces then split into sub-strings (divided by spaces) and place into array
-  arr = string.gsub(/[!@$#%^&*()-=_+\[\]:;,.\/<>?\|]/, " ").split
-  # arr.values_at(0,2,4,6)
-  # arr.values_at(* [0, 2, 4, 6])
-  arr.values_at(* arr.each_index.select {|i| i.even?})
-end

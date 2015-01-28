@@ -14,12 +14,3 @@
 # prime_chars? ['ab', 'cd']       # => false
 # prime_chars? ['a', 'bcd']       # => false
 # prime_chars? ['a', 'b', 'cd']   # => false
-
-def got_three?(input)
-end
-
-def prime_chars?(array)
-  count = 0
-  array.each { |string| count += string.length }
-  ('1' * count) !~ /^1?$|^(11+?)\1+$/ ? true : false
-end

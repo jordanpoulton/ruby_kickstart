@@ -69,3 +69,10 @@ def prime_chars?(array)
   require 'prime'
   array.join.length.prime?
 end
+
+# Gabe
+def prime_chars?(array)
+  count = 0
+  array.each { |string| count += string.length }
+  ('1' * count) !~ /^1?$|^(11+?)\1+$/ ? true : false
+end
