@@ -73,3 +73,8 @@ def add_more_ruby(string)
 def add_more_ruby(string)
   string.gsub("sad", "happy").gsub("Sad", "Happy")
 end
+
+#Carrie Christenson
+def add_more_ruby(string)
+	string.gsub('sad', 'happy').gsub('Sad', 'Happy')
+end
