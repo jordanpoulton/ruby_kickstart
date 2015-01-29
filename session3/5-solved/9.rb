@@ -20,3 +20,24 @@ def shared(a, b)
 
   return union, result.sort
 end
+
+#Jordan  - interested to get feedback here
+def shared(a, b)
+  union = Hash.new
+  shared_items = Array.new
+  a.each do |element|
+    union[element] = [true, nil]
+
+    if b.include? element
+      union[element][1] = true
+      shared_items << element
+      b.delete(element)
+    end
+  end
+
+  b.each do |element|
+    union[element] = [nil, true]
+  end
+  [union, shared_items]
+end
+#==========
