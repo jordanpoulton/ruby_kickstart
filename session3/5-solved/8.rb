@@ -13,3 +13,21 @@ class Person
     @initializer.call(self)
   end
 end
+
+#Jordan
+class Person
+  attr_accessor :name, :age, :quote
+
+  def initialize(options={}, &initializer)
+    self.name = options[:name]
+    self.age = options[:age]
+    self.quote = options[:quote]
+    @initializer = initializer
+    initializer.call self if block_given?
+  end
+
+  def reinit
+    @initializer.call self
+  end
+end
+
