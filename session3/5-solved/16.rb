@@ -4,3 +4,12 @@ def print_list(list)
     list = list[:next]
   end
 end
+
+#Jordan
+def print_list(list)
+  until list == nil
+    puts list[:data]
+    list = list[:next]
+  end
+end
+#=====
