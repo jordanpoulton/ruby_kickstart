@@ -1,4 +1,4 @@
-# This challenge is based off of problem 1
+# This challenge is based off of Example 1 (session 3/2-examples/1_hashes)
 # modify it such that it also accepts in the hash, a color (whose values are red("#FF0000"), green("#00FF00"), and blue(#0000FF) )
 # if the color is set, then it should show up in the style
 # It should also not be necessary to pass in the hash, if you don't want to specify options
@@ -31,10 +31,16 @@ class HTMLTag
     :monospace  => '"Courier New", "Lucida Console"'
   }
 
+  COLORS = {
+    :red => "#FF0000",
+    :green => "#00FF00",
+    :blue => "#0000FF"
+  }
+
   attr_accessor :name, :innerHTML, :options
 
   # options: :multiline should be true or false
-  def initialize(name, innerHTML, options)
+  def initialize(name, innerHTML, options={})
     @name, @innerHTML, @options = name, innerHTML, options
   end
 
@@ -43,9 +49,18 @@ class HTMLTag
     FONTS[font]
   end
 
+  def color
+    color = options[:color]
+    COLORS[color]
+  end
+
   def style
-    return nil unless options[:font]
-    "style='font-family:#{font}'"
+    if options[:font]
+    return "style='font-family:#{font};color:#{color};'" if options[:color]
+    return "style='font-family:#{font}'"
+    else
+      return "style='color:#{color};'" if options[:color]
+    end
   end
 
   def to_s
@@ -54,6 +69,5 @@ class HTMLTag
     "#{innerHTML.chomp}#{line_end}"  \
     "</#{name}>\n"
   end
-
 end
 

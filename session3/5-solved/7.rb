@@ -38,3 +38,52 @@ class HTMLTag
     "</#{name}>\n"
   end
 end
+
+#Jordan
+class HTMLTag
+  FONTS = {
+    :serif      => '"Times New Roman", "Georgia"',
+    :sans_serif => '"Arial", "Verdana"',
+    :monospace  => '"Courier New", "Lucida Console"'
+  }
+
+  COLORS = {
+    :red => "#FF0000",
+    :green => "#00FF00",
+    :blue => "#0000FF"
+  }
+
+  attr_accessor :name, :innerHTML, :options
+
+  # options: :multiline should be true or false
+  def initialize(name, innerHTML, options={})
+    @name, @innerHTML, @options = name, innerHTML, options
+  end
+
+  def font
+    font = options[:font]  #  one of :serif, :sans_serif, or :monospace
+    FONTS[font]
+  end
+
+  def color
+    color = options[:color]
+    COLORS[color]
+  end
+
+  def style
+    if options[:font]
+    return "style='font-family:#{font};color:#{color};'" if options[:color]
+    return "style='font-family:#{font}'"
+    else
+      return "style='color:#{color};'" if options[:color]
+    end
+  end
+
+  def to_s
+    line_end = if options[:multiline] then "\n" else "" end
+    "<#{name} #{style}>#{line_end}"  \
+    "#{innerHTML.chomp}#{line_end}"  \
+    "</#{name}>\n"
+  end
+end
+#==========
