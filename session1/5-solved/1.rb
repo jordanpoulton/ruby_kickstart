@@ -71,9 +71,7 @@ def arithmetic1(n)
   n * 5 -20
 end
 
-
 #Guido
-
 def arithmetic1(n)
 	return (n * 5) - 20
 end
@@ -81,5 +79,10 @@ end
 #Alex Parkinson
 def arithmetic1(n)
   (n * 5) - 20
+end
+
+# Carrie Christenson
+def arithmetic1(n)
+	n * 5 -20
 end
 

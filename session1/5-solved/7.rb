@@ -188,7 +188,7 @@ end
 #Guido
 
 def pirates_say_arrrrrrrrr(string)
-  str = ""  
+  str = ""
   string.length.times do |i|
 	  if string[i] == "R" || string[i] == "r"
 		  str << string[i + 1].to_s
@@ -197,3 +197,16 @@ def pirates_say_arrrrrrrrr(string)
  str
 end
 
+
+#Carrie Christenson
+def pirates_say_arrrrrrrrr(string)
+ 	answer = String.new
+ 	i = 0
+ 	while i < string.length-1
+ 		if string[i] == "r" || string[i] == "R"
+ 			answer << string[i+1]
+ 		end
+ 		i = i+1
+ 	end
+return answer
+end

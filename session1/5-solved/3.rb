@@ -98,9 +98,9 @@ end
 # Rizwan Ali
 if n.even?
     return 10
-  elsif n.odd?
+elsif n.odd?
     return 20
-  end
+end
 
 
 #Guido
@@ -116,5 +116,14 @@ def ten_twenty(n)
   else
     return 20
   end
+end
+
+#Carrie Christenson
+def ten_twenty(n)
+	if	n % 2 == 0
+		10
+	else
+		20
+	end
 end
 

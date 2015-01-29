@@ -255,7 +255,6 @@ def grade(num_books, has_read_books)
   end
 end
 
-
 #Guido
 
 def grade(num_books, has_read_books)
@@ -271,9 +270,21 @@ def grade(num_books, has_read_books)
 		return "B"
 	elsif num_books > 20 && has_read_books == true
 		return "A"
-	end
+  end
 end
 
+#Carrie Christenson
+def grade(num_books, has_read_books)
+	if has_read_books
+		return "C" if num_books < 10
+		return "B" if num_books <= 20
+		return "A"
+	else
+		return "D" if num_books < 10
+		return "C" if num_books <= 20
+		return "B"
+	end
+end
 
 
 #Alex Parkinson
@@ -288,4 +299,3 @@ def grade(num_books, reads_books)
     return "B" if num_books > 20
   end
 end
-

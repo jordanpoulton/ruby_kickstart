@@ -243,6 +243,24 @@ def odds_and_evens(string, return_odds)
   return newString
 end
 
+#Carrie Christenson
+def odds_and_evens(string, return_odds)
+	answer = String.new
+	if return_odds == true
+		i = 1
+		while i < string.length
+  		answer << string[i]
+  		i = i + 2
+  		end
+  	else
+  		i = 0
+		while i < string.length
+  		answer << string[i]
+  		i = i + 2
+  		end
+	end
+return answer
+end
 
 
 #Guido
