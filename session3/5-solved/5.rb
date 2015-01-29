@@ -41,6 +41,7 @@ def spiral_access(arr, &block)
   spiral_access(arr, &block)#calls the method again to repeat
   end
 #===============================
+#Really nice solution Meads (Jordan)
 
 
 
