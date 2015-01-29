@@ -15,4 +15,11 @@
 # mod_three [0,1,2,3,4,5,6,7] # => [1, 2, 1, 2, 1]
 
 def mod_three(array)
+
+  return_array = []
+  array.each do |n|
+        return_array << n % 3 if (n % 3 != 0) 
+    #end
+  end
+  return_array
 end

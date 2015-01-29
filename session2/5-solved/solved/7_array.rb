@@ -12,5 +12,15 @@
 
 def alternate_words(string)
 
+  return_array = []
+  #string = string.gsub("." , " ")
+  #string = string.gsub("?" , " ")
+  string = string.split(" ")
+  string.each_with_index do |word, index|
+    if index.even?
+    return_array << word
+    end
+  end
+  return_array
 end
 
