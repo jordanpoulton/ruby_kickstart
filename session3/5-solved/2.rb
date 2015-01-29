@@ -9,6 +9,21 @@ def staircase(n)
   to_return
 end
 
+#Jordan
+def staircase(number)
+  output = {}
+  1.upto(number) do |num|
+    next if num.even?
+
+    array_of_all_numbers = Array.new(num) { |index| index+1 }
+
+
+    output[num] = array_of_all_numbers.select{|e| e.even?}
+  end
+  output
+end
+#=======
+
 #================================
 #paul fitz & meads
 
@@ -47,7 +62,7 @@ def staircase(n)
 	odd = []
 	even = []
 
-	(1..n).each do |x| 
+	(1..n).each do |x|
 		odd << x if x.odd?
 		even << x if x.even?
 	end
