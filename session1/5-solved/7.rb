@@ -197,7 +197,6 @@ def pirates_say_arrrrrrrrr(string)
  str
 end
 
-
 #Carrie Christenson
 def pirates_say_arrrrrrrrr(string)
  	answer = String.new

@@ -255,6 +255,7 @@ def grade(num_books, has_read_books)
   end
 end
 
+<<<<<<< HEAD
 #Guido
 
 def grade(num_books, has_read_books)
@@ -286,7 +287,6 @@ def grade(num_books, has_read_books)
 	end
 end
 
-
 #Alex Parkinson
 def grade(num_books, reads_books)
   if reads_books == true
@@ -299,3 +299,4 @@ def grade(num_books, reads_books)
     return "B" if num_books > 20
   end
 end
+
