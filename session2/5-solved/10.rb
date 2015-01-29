@@ -62,9 +62,9 @@ class Person
 	attr_accessor 'name'
 	def initialize(name,age)	#initialize can be thought of as the function that "boots up" each object the class creates.
 		@name = name
-		@age = age 
+		@age = age
 end
-	def birthday 
+	def birthday
 	@age += 1					#when josh.birthday is invoked Josh's age will also increase by one.
 	end
 end
@@ -84,12 +84,12 @@ class Person
   def birthday
     @age += 1
   end
-  
+
 end
 
 # Tom Coakes
 class Person
-  
+
   attr_accessor :name, :age
 
   def initialize(name, age)
@@ -100,5 +100,22 @@ class Person
   def birthday
     @age = @age + 1
   end
+end
+
+
+# Yannick
+
+class Person
+	attr_accessor 'name', 'age'
+
+	def initialize(name, age)
+		@name = name
+		@age = age
+	end
+
+	def birthday
+		@age += 1
+	end
+
 end
 

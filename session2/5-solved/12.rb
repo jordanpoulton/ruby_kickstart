@@ -32,7 +32,8 @@ class Fraction
   def initialize (numerator, denominator)
     @denominator = denominator
     @numerator =  numerator
-=======
+end
+
 #Jordan
 class Fraction
 
@@ -53,17 +54,14 @@ class Fraction
   def lowest
     common = gcd(numerator, denominator)
     Fraction.new(numerator/common, denominator/common)
-
   end
 
   def gcd(a,b)
     return a if b == 0
-
-    gcd(b, a%b)#recursion being used here.
+    gcd(b, a%b)
   end
 
-  def to_s#this is overriding the usualy to_s method with this one hence puts is using this to_s
-
+  def to_s
     gcd(b, a%b)
   end
 end
@@ -96,7 +94,7 @@ class Fraction
       "#{numerator}/#{denominator}"
     end
 
-  
+
 end
 
 #================================================
@@ -122,7 +120,7 @@ attr_accessor :denominator
   end
 
   def to_f                            #method used to divide numerator by denominator and return this as a float
-    answer = numerator.to_f / denominator 
+    answer = numerator.to_f / denominator
   end
 
     def gcd(a,b)
@@ -130,10 +128,6 @@ attr_accessor :denominator
       gcd(b, a%b)
     end
 end
-=======
-
-end
-
 
 # Gabe
 class Fraction
@@ -163,20 +157,19 @@ class Fraction
     return a if b == 0
     gcd(b, a%b)
   end
-
 end
 
 
 # Tom Coakes
 class Fraction
-  
+
   attr_accessor :numerator, :denominator
 
   def initialize(numerator, denominator)
     @numerator = numerator
     @denominator = denominator
   end
-  
+
   def to_s
     "#{@numerator}/#{@denominator}"
   end
@@ -194,24 +187,4 @@ class Fraction
     return a if b == 0
     gcd(b, a%b)
   end
-
 end
-
-#### GABE: This is code that I couldn't tell where it belonged after merging. Sorry!
-    (@numerator.to_f / @denominator.to_f)
-
-  end
-
-
-
-end
-
-  def lowest
-    common = gcd(@numerator, @denominator)
-    @numerator = @numerator / common
-    @denominator = @denominator / common
-    # Need to return a non-string version of "1/3"
-    Fraction.new(@numerator, @denominator)
-  end
-end
-#### GABE: End

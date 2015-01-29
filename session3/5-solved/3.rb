@@ -33,3 +33,11 @@ def word_count(string)
 	return to_count
 end
 
+#Yannick
+def word_count(string)
+
+	answer = {}
+	string.split.each{|x| answer[x.downcase] += 1}
+	answer
+
+end

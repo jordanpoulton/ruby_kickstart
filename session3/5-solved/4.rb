@@ -28,3 +28,11 @@ def first_pos(string)
   end
   to_return
 end
+
+#Yannick
+def first_pos string
+  answer = {}
+  array = string.split
+  array.each{|word| answer[word] = array.index (word) } 
+  answer    
+end

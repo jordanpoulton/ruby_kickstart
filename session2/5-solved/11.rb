@@ -26,7 +26,7 @@ class BeerSong
 
   # returns "bottle" or "bottles"
   def bottle(n)
-    if n == 1 then 'bottle' else 'bottles' 
+    if n == 1 then 'bottle' else 'bottles'
     end
   end
 
@@ -42,7 +42,6 @@ class BeerSong
   end
 end
 
-<<<<<<< HEAD
 #===================Meads=================
 
 class BeerSong
@@ -95,8 +94,7 @@ def print_song
   end
 
 end
-#==============================================
-=======
+#======
 
 #Sebastien
 class BeerSong
@@ -154,7 +152,7 @@ class BeerSong
   end
 end
 
-<<<<<<< HEAD
+
 #paul fitz
 class BeerSong          #create a class BeerSong
   attr_accessor :beers      #create attr_accessor so beers can be updated
@@ -164,7 +162,7 @@ class BeerSong          #create a class BeerSong
     beers = 99 if beers > 99
     @beers = beers
   end
- 
+
  def translate(n)       #translate numbers into their corresponding matuching number string
     if 0 <= n && n <= 19
       %w(zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen)[n]
@@ -196,7 +194,7 @@ class BeerSong          #create a class BeerSong
   end
 end
 end
-=======
+
 #Jordan
 class BeerSong
   NUMBERS = {
@@ -300,7 +298,7 @@ class BeerSong
   end
 
   def plural?
-    return "s" if @beers != 1 
+    return "s" if @beers != 1
   end
 
 end
@@ -437,3 +435,86 @@ class BeerSong
     print "#{num_to_text(@initial_num)} bottle of beer on the wall,\n#{num_to_text(@initial_num)} bottle of beer,\nTake one down, pass it around,\n#{num_to_text(next_num)} bottles of beer on the wall.\n"
   end
 end
+
+# Yannick
+
+class BeerSong
+
+  attr_accessor :bottles
+
+    NUMBERS = {
+    1=> "one",
+    2=> "two",
+    3=> "three",
+    4=> 'four',
+    5=> "five",
+    6=> "six",
+    7=> "seven",
+    8=> "eight",
+    9=> "nine",
+    10=> "Ten"
+  }
+
+  TEENS = {
+    11=> "Eleven",
+    12=> "Twelve",
+    13=> "Thirteen",
+    14=> "Fourteen",
+    15=> "Fifteen",
+    16=> "Sixteen",
+    17=> "Seventeen",
+    18=> "Eighteen",
+    19=> "Nineteen",
+    20=> "Twenty"
+  }
+
+  TENS = {
+    0=> "Zero",
+    10=> "Ten",
+    20=> "Twenty",
+    30=> "Thirty",
+    40=> "Forty",
+    50=> "Fifty",
+    60=> "Sixty",
+    70=> "Seventy",
+    80=> "Eighty",
+    90=> "Ninety"
+  }
+
+  def initialize(beers)
+    @beers = beers
+      @beers = 0 if beers < 0
+      @beers = 99 if beers > 99
+    end
+
+    def translate(n)
+        return  TENS[0] if n == 0
+        if 0 < n && n < 11
+          NUMBERS[n]
+        elsif 10 < n && n < 21
+          TEENS[n]
+        elsif n % 10 == 0
+          TENS[n]
+        else
+          return "#{translate ((n/10)*10)}-#{translate n%10}"
+        end
+    end
+
+    def stanza(beers)
+        puts "#{translate(beers).capitalize} #{bottle_s(beers)} of beer on the wall,"
+        puts "#{translate(beers).capitalize} #{bottle_s(beers)} of beer,"
+        puts "Take one down, pass it around,"
+        puts "#{translate(beers-1).capitalize} #{bottle_s(beers-1)} of beer on the wall."
+    end
+
+    def bottle_s(n)
+    n == 1 ? "bottle" : "bottles"
+    end
+
+    def print_song
+        @beers.downto 1 do |n|
+        stanza(n)
+        end
+    end
+end
+

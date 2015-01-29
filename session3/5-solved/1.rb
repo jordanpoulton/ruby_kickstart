@@ -21,3 +21,7 @@ def reverse_map(*array, &block)
 	end
 end
 
+#Yannick
+def reverse_map(*arr, &block)
+		arr.reverse.map(&block)
+end

@@ -7,4 +7,24 @@
 # Examples
 # alternate_words("Lorem ipsum dolor sit amet.")  # => ["Lorem", "dolor", "amet"]
 # alternate_words("Can't we all get along?")      # => ["Can't", "all", "along"]
+<<<<<<< HEAD:session2/3-challenge/7_array.rb
 # alternate_words("Elementary, my dear Watson!")  # => ["Elementary", "dear"]
+=======
+# alternate_words("Elementary, my dear Watson!")  # => ["Elementary", "dear"]
+
+
+def alternate_words(string)
+
+  return_array = []
+  #string = string.gsub("." , " ")
+  #string = string.gsub("?" , " ")
+  string = string.split(" ")
+  string.each_with_index do |word, index|
+    if index.even?
+    return_array << word
+    end
+  end
+  return_array
+end
+
+>>>>>>> 4ecf017000a98f6fef7be0d32b13f2dfaa60ecd0:session2/5-solved/solved/7_array.rb
