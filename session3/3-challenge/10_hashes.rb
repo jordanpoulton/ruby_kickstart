@@ -29,13 +29,4 @@
 # create it from scratch :)
 
 
-def pathify(hash)
-  hash.each do |folder, contents|
-     print "#{folder} contains #{contents},"
-  end
-end
 
-puts pathify(
-  'usr' => {'bin' => ['ruby']},
-  'opt' => {'local' => {'bin' => ['sqlite3', 'rsync']}}
-  )
