@@ -95,3 +95,16 @@ def deaf_grandma
     end
   end
 end
+
+# Yannick
+def deaf_grandma
+
+  while question = gets.chomp
+    break if question == "BYE"
+    if line == line.upcase && line != ""
+      puts "NO, NOT SINCE 1938!"
+    else
+      puts "HUH?! SPEAK, SONNY!"
+    end
+  end
+end

@@ -40,3 +40,19 @@ def staircase(number)
 	return newHash
 end
 
+# Yannick
+def staircase(n)
+
+	return_hash = Hash.new {|value,key| value[key] = []}
+	odd = []
+	even = []
+
+	(1..n).each do |x| 
+		odd << x if x.odd?
+		even << x if x.even?
+	end
+
+	odd.each{|x| return_hash[x] = even.select{|y| y < x ? y : nil}}
+
+end
+
