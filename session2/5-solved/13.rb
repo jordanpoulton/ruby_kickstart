@@ -131,3 +131,97 @@ class Blog
     self.text == other.text
   end
 end
+
+
+# Gabe
+class User
+
+  def initialize(username)
+    @username = username
+    @blogs = []
+  end
+
+  attr_accessor :username
+  attr_accessor :blogs
+
+  def add_blog(date, text)
+    blog = Blog.new(date, self, text)
+    @blogs << blog
+    blog
+  end
+
+  def blogs
+    sorted_blogs = @blogs.sort_by { |element| element.date }
+    sorted_blogs.reverse
+  end
+
+end
+
+class Blog
+  
+  def initialize(date, user, text)
+    @user = user
+    @date = date
+    @text = text
+  end
+
+  attr_accessor :date
+  attr_accessor :user
+  attr_accessor :text
+
+  def summary
+    text.split[0...10].join(' ')
+  end
+
+  def entry
+    "#{@user.username} #{@date}\n#{@text}"
+  end
+
+  def == other
+    date == other.date && user == other.user && text == other.text
+  end
+
+end
+
+
+# Tom Coakes
+require 'date'
+
+class User
+  attr_accessor :username, :blogs
+
+  def initialize(username)
+    @username = username
+    @blogs = []
+  end
+
+  def add_blog(date, text)
+    blog1 = Blog.new(date, @username, text)
+    blogs << blog1
+    @blogs = blogs.sort_by { |blog| blog.date }.reverse
+    blog1
+  end
+end
+
+class Blog
+  attr_accessor :date, :user, :text
+
+  def initialize(date, user, text)
+    @date = date
+    @user = user
+    @text = text
+  end
+
+  def summary
+    @text.split(' ')[0..9].join(' ')
+  end
+
+  def entry
+    return "#{@user.username} #{@date}\n#{@text}"
+  end
+
+  def ==(other)
+    return date == other.date && user == other.user && text == other.text
+  end
+
+end

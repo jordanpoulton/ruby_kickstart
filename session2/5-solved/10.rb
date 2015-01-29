@@ -68,3 +68,37 @@ end
 	@age += 1					#when josh.birthday is invoked Josh's age will also increase by one.
 	end
 end
+
+
+# Gabe
+class Person
+
+  def initialize(name, age)
+    @name = name
+    @age = age
+  end
+
+  attr_accessor :name
+  attr_accessor :age
+
+  def birthday
+    @age += 1
+  end
+  
+end
+
+# Tom Coakes
+class Person
+  
+  attr_accessor :name, :age
+
+  def initialize(name, age)
+    @name = name
+    @age = age
+  end
+
+  def birthday
+    @age = @age + 1
+  end
+end
+

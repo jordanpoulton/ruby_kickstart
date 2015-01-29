@@ -24,6 +24,15 @@ class Fraction
   end
 end
 
+
+#==============Meads==============
+class Fraction
+  attr_accessor :numerator, :denominator
+
+  def initialize (numerator, denominator)
+    @denominator = denominator
+    @numerator =  numerator
+=======
 #Jordan
 class Fraction
 
@@ -44,10 +53,17 @@ class Fraction
   def lowest
     common = gcd(numerator, denominator)
     Fraction.new(numerator/common, denominator/common)
+
   end
 
   def gcd(a,b)
     return a if b == 0
+
+    gcd(b, a%b)#recursion being used here.
+  end
+
+  def to_s#this is overriding the usualy to_s method with this one hence puts is using this to_s
+
     gcd(b, a%b)
   end
 end
@@ -79,7 +95,7 @@ class Fraction
     def to_s
       "#{numerator}/#{denominator}"
     end
-<<<<<<< HEAD
+
   
 end
 
@@ -117,4 +133,85 @@ end
 =======
 
 end
->>>>>>> 957a49424f53cb1f9a72406f6abc7d78c4fb0057
+
+
+# Gabe
+class Fraction
+
+  def initialize(numerator, denominator)
+    @numerator = numerator
+    @denominator = denominator
+  end
+
+  attr_accessor :numerator
+  attr_accessor :denominator
+
+  def to_f
+    @numerator / @denominator.to_f
+  end
+
+  def to_s
+    @numerator.to_s + "/" + @denominator.to_s
+  end
+
+  def lowest
+    gcd = gcd(@denominator, @numerator)
+    Fraction.new(@numerator/gcd, @denominator/gcd)
+  end
+
+  def gcd(a,b)
+    return a if b == 0
+    gcd(b, a%b)
+  end
+
+end
+
+
+# Tom Coakes
+class Fraction
+  
+  attr_accessor :numerator, :denominator
+
+  def initialize(numerator, denominator)
+    @numerator = numerator
+    @denominator = denominator
+  end
+  
+  def to_s
+    "#{@numerator}/#{@denominator}"
+  end
+
+  def to_f
+    @numerator.to_f / @denominator.to_f
+  end
+
+  def lowest
+    gcommon = gcd(@numerator, @denominator)
+    Fraction.new(@numerator / gcommon,@denominator / gcommon)
+  end
+
+  def gcd(a,b)
+    return a if b == 0
+    gcd(b, a%b)
+  end
+
+end
+
+#### GABE: This is code that I couldn't tell where it belonged after merging. Sorry!
+    (@numerator.to_f / @denominator.to_f)
+
+  end
+
+
+
+end
+
+  def lowest
+    common = gcd(@numerator, @denominator)
+    @numerator = @numerator / common
+    @denominator = @denominator / common
+    # Need to return a non-string version of "1/3"
+    Fraction.new(@numerator, @denominator)
+  end
+end
+#### GABE: End

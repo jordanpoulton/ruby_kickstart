@@ -70,3 +70,26 @@ def alternate_words(string)
   result
 end
 
+
+# Gabe
+def alternate_words(string)
+  # replace non-considered characters with spaces then split into sub-strings (divided by spaces) and place into array
+  arr = string.gsub(/[!@$#%^&*()-=_+\[\]:;,.\/<>?\|]/, " ").split
+  # arr.values_at(0,2,4,6)
+  # arr.values_at(* [0, 2, 4, 6])
+  arr.values_at(* arr.each_index.select {|i| i.even?})
+end
+
+# Tom Coakes
+def alternate_words(string)
+  final_array = []
+
+  no_punctuation = string.gsub(/[!@$#%^&*()-=_+:;,.<>?|]/, ' ')
+  split_string = no_punctuation.split(' ')
+
+  split_string.each_slice(2) do |word1, word2|
+      final_array << word1
+  end
+
+  final_array
+end

@@ -69,3 +69,26 @@ def prime_chars?(array)
   require 'prime'
   array.join.length.prime?
 end
+
+
+# Gabe
+def prime_chars?(array)
+  count = 0
+  array.each { |string| count += string.length }
+  ('1' * count) !~ /^1?$|^(11+?)\1+$/ ? true : false
+end
+
+
+# Tom Coakes
+def prime_chars?(array)
+  sum = array.join.length
+
+  return false if array.empty?
+  return false if sum == 0 || sum == 1
+
+  (2...sum).each do |num|
+    if sum % num == 0
+      return false
+    end
+  end
+end

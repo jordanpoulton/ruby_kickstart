@@ -85,6 +85,23 @@ answer = ""
   puts "goodbye"
 end
 
+
+# Gabe
+def hi_hi_goodbye
+  input = "not bye"
+    while input != "bye"
+      puts "Enter a number"
+      input = gets.chomp
+      if input == "bye"
+        puts "goodbye"
+      else
+        integer = input.to_i
+        puts "hi " * integer
+      end 
+    end
+end
+
+
 #Costas
 def hi_hi_goodbye
 puts "Enter a number: "
@@ -97,3 +114,18 @@ end
 
 
 hi_hi_goodbye if $0 == __FILE__  # a little magic so that you can run with "$ ruby 2_input_output_control.rb" but it will still work for our tests
+
+
+# Tom Coakes
+def hi_hi_goodbye
+  while true
+    puts "Enter a number "
+    input = gets.chomp
+    if input == "bye"
+      print "goodbye"
+      break
+    else
+      puts "hi " * input.to_i
+    end
+  end
+end
