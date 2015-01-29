@@ -9,3 +9,15 @@ def your_sort( array , &orderer )
     end
   end
 end
+
+#Jordan - I still don't really understand this...
+def your_sort(array, &sorter)
+  sorter ||= Proc.new { |a,b| a <=> b}
+  array.each_index do |item1|
+    array.each_index do |item2|
+      order = sorter.call(array[item1], array[item2])
+      array[item1], array[item2] = array[item2], array[item1] if order < 0
+    end
+  end
+end
+#=========
