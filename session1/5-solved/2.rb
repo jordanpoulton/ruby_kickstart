@@ -142,3 +142,13 @@ def arithmetic2(a, b)
 		(b.to_f / 2)
 	end
 end
+
+#Chris Ward
+
+def arithmetic2(a, b)
+	if a < b
+		a/2.to_f
+	else
+		b/2.to_f
+	end
+end

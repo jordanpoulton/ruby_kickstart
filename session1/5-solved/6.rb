@@ -292,3 +292,28 @@ def odds_and_evens(string, return_odds)
   end
 result
 end
+
+#Chris Ward
+
+def odds_and_evens(string, return_odds)
+array = string.chars
+new_string = ""
+
+if return_odds
+  array.each_with_index do |value, index|
+    if index % 2 != 0
+      new_string << value
+    end
+  end
+else
+  array.each_with_index do |value, index|
+    if index % 2 == 0
+      new_string << value
+    end
+  end
+
+end
+
+new_string
+
+end

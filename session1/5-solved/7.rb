@@ -209,3 +209,15 @@ def pirates_say_arrrrrrrrr(string)
  	end
 return answer
 end
+
+#Chris Ward
+
+def pirates_say_arrrrrrrrr(string)
+return_string = ""
+string.length.times do |i|
+  if string[i] == "r" || string[i]== "R"
+    return_string << string[i+1].to_s
+  end
+end
+return_string
+end
