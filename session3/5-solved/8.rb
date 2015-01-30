@@ -31,3 +31,22 @@ class Person
   end
 end
 
+
+
+# Tom Coakes
+
+class Person
+  attr_accessor :name, :age, :quote
+
+  def initialize(options, &initializer)
+    @name = options[:name]
+    @age = options[:age]
+    @quote = options[:quote]
+    @initializer = initializer
+    initializer.call self if initializer
+  end
+
+  def reinit
+    @initializer.call self
+  end
+end

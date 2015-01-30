@@ -41,3 +41,12 @@ def word_count(string)
 	answer
 
 end
+
+
+# Tom Coakes
+def word_count(string)
+  hash = Hash.new   # Can I get it to take a block?
+  array = string.downcase.split(' ')
+  array.each { |word| hash[word] = array.count(word) }
+  return hash
+end
