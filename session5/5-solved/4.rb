@@ -19,3 +19,27 @@ module OperatorGeneratorFromSpace
     !(self < other)
   end
 end
+
+#Jordan
+module OperatorGeneratorFromSpace
+  def <(arg)
+    (self <=> arg) < 0
+  end
+
+  def >(arg)
+    (self <=> arg) > 0
+  end
+
+  def ==(arg)
+    (self <=> arg) == 0
+  end
+
+  def >=(arg)
+    (self <=> arg) > -1
+  end
+
+  def <=(arg)
+    (self <=> arg) < 1
+  end
+end
+#=====
