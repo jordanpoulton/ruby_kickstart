@@ -22,3 +22,5 @@
 # ff.max                        # => 5
 # ff.min                        # => 1
 # ff.select { |num| num.odd? }  # => [1, 5, 3]
+
+

@@ -46,6 +46,69 @@ end
 #   include ListInspect
 # end
 
+#Jordan
+class List
+  include Enumerable
+
+  def initialize
+    @list = []
+  end
+
+  def each
+    @list.each {|item| yield item}
+  end
+
+  def inspect
+    output = "#<List: "
+    each {|element| output << element.inspect + ", "}
+    output.sub!(/, $/, "")
+    output + ">"
+  end
+
+  def << arg
+    @list << arg
+    self
+  end
+
+  def list
+    @list
+  end
+end
+#=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # =====  Write our own linked list, mix in Enumerable  =====
 # # Yikes, this one is pretty scary! It's a linked list, where we put
