@@ -152,3 +152,15 @@ class String
   end
 end
 
+#Phil
+class String
+  def every_other_char
+    output = ""
+    each_char.with_index do |char, index|
+      if index.even?
+        output << char
+      end
+    end
+    output
+  end
+end

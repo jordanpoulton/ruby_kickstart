@@ -518,3 +518,78 @@ class BeerSong
     end
 end
 
+#Phil
+class BeerSong
+  attr_accessor :bottles
+
+  def initialize(bottles)
+    if bottles < 0
+      bottles = 0
+    elsif bottles > 99
+      bottles = 99
+    end
+    self.bottles = bottles
+  end
+
+  def print_song
+    while bottles >= 0 
+      print_line bottles
+      bottles = bottles - 1
+    end
+  end
+    
+  def print_line bottles
+    if bottles == 0
+      String.new
+    elsif bottles == 1
+      puts  "One bottle of beer on the wall,",
+            "One bottle of beer,",
+            "Take one down, pass it around,",
+            "Zero bottles of beer on the wall."
+    else
+      puts  "#{translate bottles} bottles of beer on the wall,"
+            "#{translate bottles} of beer,"
+            "Take one down, pass it around,"
+            "#{translate bottles - 1} of beer on the wall."
+    end
+  end
+  
+  def translate bottles
+    output = ""
+    english_numbers =  {90 => "ninety",
+                        80 => "eighty",
+                        70 => "seventy",
+                        60 => "sixty",
+                        50 => "fifty",
+                        40 => "forty",
+                        30 => "thirty",
+                        20 => "twenty",
+                        19 => "nineteen",
+                        18 => "eighteen",
+                        17 => "seventeen",
+                        16 => "sixteen",
+                        15 => "fifteen",
+                        14 => "fourteen",
+                        13 => "thirteen",
+                        12 => "twelve",
+                        11 => "eleven",
+                        10 => "ten",
+                        9 => "nine",
+                        8 => "eight",
+                        7 => "seven",
+                        6 => "six",
+                        5 => "five",
+                        4 => "four",
+                        3 => "three",
+                        2 => "two"}
+                        
+    if english_numbers.has_key?(bottles)
+      output << english_numbers[bottles]
+    elsif 
+      output << english_numbers[(bottles / 10) * 10]
+      output << english_number[bottles % 10]    
+    end                    
+    output.capitalize 
+  end
+    
+end
