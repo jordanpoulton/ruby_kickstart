@@ -12,3 +12,4 @@
 #   exception_raiser 3   # =>   #<Exception: No 3s allowed!>
 #   exception_raiser 4   # =>   #<SyntaxError: No 4s allowed!>
 #   exception_raiser 5   # =>   #<RubyKickstartException: No 5s allowed!>
+
