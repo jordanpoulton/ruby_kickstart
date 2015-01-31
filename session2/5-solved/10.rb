@@ -119,3 +119,18 @@ class Person
 
 end
 
+#Chris Ward
+class Person
+	def initialize(name,age)
+		@name = name
+		@age = age
+	end
+
+	def birthday
+		@age = age+1
+	end
+
+	attr_accessor 'name', 'age'
+end
+
+
