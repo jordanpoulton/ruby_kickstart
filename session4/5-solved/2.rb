@@ -1,5 +1,5 @@
 # 1's solution requires the actual file we are interested in
-require File.dirname(__FILE__) + "/1"
+require File.dirname(__FILE__) + "/1_stack_classes_inspect"
 
 class StackInDisguise < Stack
   def inspect

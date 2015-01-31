@@ -1,5 +1,5 @@
 # We've already solved the problem of extracting the data, no need to do it again
-require File.dirname(__FILE__) + '/7'
+require File.dirname(__FILE__) + '/7_regex.rb'
 
 
 # In reality, I'd use a templating language like ERB,
