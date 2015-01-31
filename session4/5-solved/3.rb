@@ -4,3 +4,13 @@ def passthrough(enumerable, to_pass, &block)
   end
   to_pass
 end
+
+#Jordan
+def passthrough(enum, to_pass, &block)
+  enum.each do |e|
+    to_pass = block.call(to_pass, e)
+  end
+  to_pass
+end
+#=====
+
