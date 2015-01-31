@@ -9,11 +9,3 @@
 # alternate_words("Can't we all get along?")      # => ["Can't", "all", "along"]
 # alternate_words("Elementary, my dear Watson!")  # => ["Elementary", "dear"]
 
-def alternate_words(string)
-output = []
-working_array = string.gsub(/[:;,(.)?-]/," ").split(" ")
-working_array.each_with_index do |string, index|
-	output << string if index.even?
-end
-output
-end

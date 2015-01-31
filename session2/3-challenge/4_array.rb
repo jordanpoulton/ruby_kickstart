@@ -8,15 +8,5 @@
 
 # This time you will have to define the method, it's called: get_squares
 
-def get_squares(array)
-output = []
-array.each do |n|
-	x = n*n
-output << n if array.include?(x)
-end
-output.sort
-end
 
-#input = [9]
-#get_squares(input)
 

@@ -75,3 +75,14 @@ def get_squares(array)
   sorted_array.sort
 end
 
+#Chris Ward
+
+def get_squares(array)
+output = []
+array.each do |n|
+  x = n*n
+output << n if array.include?(x)
+end
+output.sort
+end
+

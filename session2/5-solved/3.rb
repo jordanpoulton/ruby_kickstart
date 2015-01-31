@@ -139,3 +139,16 @@ class String
     new_array.join
   end
 end
+
+#Chris Ward
+
+class String
+  def every_other_char
+    output = ""
+    self.chars.each_with_index do |letter, index|
+      output << letter if index.even?
+    end
+    output
+  end
+end
+
