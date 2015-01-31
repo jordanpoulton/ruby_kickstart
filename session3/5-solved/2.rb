@@ -71,3 +71,17 @@ def staircase(n)
 
 end
 
+
+# Tom Coakes
+def staircase(int)
+  hash = {}
+  (1..int).each { |num| hash[num] = [] if num.odd? }
+
+  hash.each do |key, value|
+    array = []
+    (1..key).each do |num|
+      array << num if num.even?
+      hash[key] = array
+    end
+  end
+end

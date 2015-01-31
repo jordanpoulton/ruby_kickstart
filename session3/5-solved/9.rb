@@ -41,3 +41,22 @@ def shared(a, b)
   [union, shared_items]
 end
 #==========
+
+
+# Tom Coakes
+
+def shared(a, b)
+  hash = {}
+  key_array = []
+
+  a.each do |element|
+    b.include?(element) ? hash[element] = [true, true] : hash[element] = [true, nil]
+  end
+
+  b.each do |element|
+    !a.include?(element) ? hash[element] = [nil, true] : nil
+  end
+
+  hash.each_pair { |key, value| key_array << key if value == [true, true] }
+  [hash, key_array]
+end

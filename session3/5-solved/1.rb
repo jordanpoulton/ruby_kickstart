@@ -25,3 +25,8 @@ end
 def reverse_map(*arr, &block)
 		arr.reverse.map(&block)
 end
+
+# Tom Coakes
+def reverse_map(*args, &block)
+    args.reverse.map(&block)
+end

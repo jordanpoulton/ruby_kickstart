@@ -87,3 +87,45 @@ class HTMLTag
   end
 end
 #==========
+
+
+# Tom Coakes
+
+class HTMLTag
+  FONTS = {
+    :serif      => '"Times New Roman", "Georgia";',
+    :sans_serif => '"Arial", "Verdana";',
+    :monospace  => '"Courier New", "Lucida Console";'
+  }
+
+  attr_accessor :name, :innerHTML, :options
+
+  def initialize(name, innerHTML, options = {:multiline => false})
+    @name, @innerHTML, @options = name, innerHTML, options
+  end
+
+  def font
+    FONTS[options[:font]]
+  end
+
+  def color
+    return "#FF0000;" if options[:color] == :red
+    return "#00FF00;" if options[:color] == :green
+    return "#0000FF;" if options[:color] == :blue
+  end
+
+  def style
+    return nil unless options[:color] || options[:font]
+    color_bit = "color:#{color}" if options[:color]
+    font_bit = "font-family:#{font}" if options[:font]
+    "style='#{font_bit}#{color_bit}'"
+  end
+
+  def to_s
+    line_end = if options[:multiline] then "\n" else "" end
+    "<#{name} #{style}>#{line_end}"  \
+    "#{innerHTML.chomp}#{line_end}"  \
+    "</#{name}>\n"
+  end
+
+end
