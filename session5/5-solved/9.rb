@@ -40,3 +40,43 @@ def trees_to_html(trees)
 
   result
 end
+
+#Jordan
+require File.dirname(__FILE__) + '/7_regex.rb'
+
+def trees_to_html(trees)
+
+  output = '
+    <!doctype html>
+    <html>
+     <head>
+       <title>Green Thumb Nursery</title>
+     </head>
+     <body>
+       <h1>Catalog</h1>
+       <table>
+         <tr>
+           <td>Type of tree</td>
+           <td>Size of the tree</td>
+           <td>Price of the tree</td>
+         </tr>
+  '
+
+    tree_parser(trees).each do |tree, size, cost|
+      output << "
+         <tr>
+          <td>#{tree}</td>
+          <td>#{size}</td>
+          <td>#{cost}</td>
+         </tr>
+        "
+    end
+
+    output << "
+       </table>
+     </body>
+    </html>
+  "
+  output
+end
+#==============
