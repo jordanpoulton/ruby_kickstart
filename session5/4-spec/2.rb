@@ -1,7 +1,7 @@
 if $LOADED_FEATURES.grep(/2_blocks_var_args/).empty?
-  require File.join(File.dirname(__FILE__), '..', 'solved', '1')
+  require File.join(File.dirname(__FILE__), '..', '5-solved', '1')
 else
-  require File.join(File.dirname(__FILE__), '..', 'challenge', '1_singleton_class_string_exception')
+  require File.join(File.dirname(__FILE__), '..', '3-challenge', '1_singleton_class_string_exception')
 end
 
 

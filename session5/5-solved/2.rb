@@ -17,3 +17,20 @@ class ApplicationController
     end
   end
 end
+
+#Jordan
+class ApplicationController
+  def self.css_classes(*instructions)
+    options = instructions.pop if instructions.last.is_a? Hash
+    options ||= Hash.new
+
+    before_filter options do |controller|
+
+      instructions.each do |css_body_class|
+        controller.body_class << css_body_class
+      end
+    end
+  end
+end
+#=====
+
