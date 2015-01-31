@@ -61,6 +61,3 @@ class Stack
   end
 end
 
-
-
-puts stack.inspect
