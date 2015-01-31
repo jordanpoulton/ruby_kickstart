@@ -135,3 +135,9 @@ def ten_twenty(n)
 		20
 	end
 end
+
+#Chris Ward
+
+def ten_twenty(n)
+  10 : 20 if n.even?
+end
