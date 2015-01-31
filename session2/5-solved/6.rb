@@ -92,3 +92,16 @@ def prime_chars?(array)
     end
   end
 end
+
+#Chris Ward
+
+def prime?(n)
+  return false if n < 2
+  (2..(n-1)).each { |x| return false if n % x == 0 }
+  true
+end
+
+def prime_chars?(array)
+num = array.join.length
+prime?(num)
+end

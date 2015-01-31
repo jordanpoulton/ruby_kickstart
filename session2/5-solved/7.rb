@@ -93,3 +93,14 @@ def alternate_words(string)
 
   final_array
 end
+
+#Chris Ward
+
+def alternate_words(string)
+output = []
+working_array = string.gsub(/[:;,(.)?-]/," ").split(" ")
+working_array.each_with_index do |string, index|
+  output << string if index.even?
+end
+output
+end

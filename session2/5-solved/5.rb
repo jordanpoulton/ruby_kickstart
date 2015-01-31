@@ -56,3 +56,11 @@ def mod_three(array)
   end
   new_array.compact
 end
+
+#Chris Ward
+
+def mod_three(array)
+working = array.reject { |n| n%3==0}
+working.map {|num| num % 3}
+end
+
