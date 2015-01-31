@@ -56,7 +56,11 @@ stack.push 2
 stack.push 3
 stack # =>  (3)2)1)
 
-
 class Stack
-  # **define the inspect method here**
+  def inspect
+  end
 end
+
+
+
+puts stack.inspect
