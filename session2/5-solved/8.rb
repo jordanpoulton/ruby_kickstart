@@ -69,3 +69,19 @@ def got_three?(array)
 
   false
 end
+
+#Chris Ward
+
+def got_three?(array)
+  output = false
+  array.each_index do |i|
+    if array[i] == array[i+1] && array[i] == array[i+2]
+      output = true
+      break
+    else
+      output = false
+    end 
+  end
+  output
+end
+
