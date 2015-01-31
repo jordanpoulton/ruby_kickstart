@@ -22,3 +22,23 @@ def match_maker(flipped, *args)
   array
 end
 #===========
+
+# Tom Coakes
+def match_maker(*args)
+  result = []
+  switch = args.shift
+
+  args.each_slice(2) do |arg1, arg2|
+    arg1 = !!arg1 # Double bang used to force these into booleans
+    arg2 = !!arg2
+    if switch == true
+      result << false if arg1 == arg2
+      result << true if arg1 != arg2
+    else
+      result << true if arg1 == arg2
+      result << false if arg1 != arg2
+    end
+  end
+
+  result
+end

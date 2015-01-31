@@ -36,3 +36,12 @@ def first_pos string
   array.each{|word| answer[word] = array.index (word) } 
   answer    
 end
+
+
+# Tom Coakes
+def first_pos(string)
+  hash = Hash.new
+  array = string.split(' ')
+  array.each { |word| hash[word] = array.index(word) }
+  return hash
+end

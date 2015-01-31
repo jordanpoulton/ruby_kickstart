@@ -1,4 +1,4 @@
-#Josh Peek
+#Josh Cheek
 def grade(num_books, reads_books)
   if reads_books
     return "C" if num_books <  10

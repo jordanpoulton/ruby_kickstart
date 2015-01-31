@@ -17,3 +17,4 @@
 # stack.push 1
 # stack.push 2
 # stack # => [1, 2]
+
