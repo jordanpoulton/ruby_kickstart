@@ -58,6 +58,15 @@ stack # =>  (3)2)1)
 
 class Stack
   def inspect
+    output = "("
+    current_head = @head
+    while current_head
+      output << current_head.data.inspect
+      output << ")"
+      current_head = current_head.next_node
+    end
+    output << ")" if output == "("
+    output
   end
 end
 
