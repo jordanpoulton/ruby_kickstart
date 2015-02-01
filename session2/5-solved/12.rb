@@ -188,3 +188,34 @@ class Fraction
     gcd(b, a%b)
   end
 end
+
+#Chris Ward
+
+class Fraction
+  def gcd(a,b)
+    return a if b == 0
+    gcd(b, a%b)
+  end
+
+  attr_accessor 'numerator', 'denominator'
+
+  def initialize(numerator,denominator)
+    @numerator = numerator
+    @denominator = denominator
+
+  end
+
+  def to_f
+    @numerator/@denominator.to_f
+  end
+
+  def lowest
+  num = gcd(@numerator,@denominator)
+  Fraction.new(@numerator/num,@denominator/num)
+  end
+
+  def to_s
+    "#{@numerator}/#{@denominator}"
+  end
+
+end
