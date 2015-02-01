@@ -42,3 +42,23 @@ def match_maker(*args)
 
   result
 end
+
+
+#=======================
+#paulf
+def match_maker(t_f, *arguments)
+  answer = []
+    arguments.each_slice(2) do |x, y|   #slices the argument 2 elements at a time
+      x = !!x 
+      y = !!y   
+
+    result = if t_f   #true if t_f == true and x != y
+        x != y
+        else
+        y == x      #else false if t_f == true and x == y
+        end
+    answer << result
+  end
+  answer
+end
+
