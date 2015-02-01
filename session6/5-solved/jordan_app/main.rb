@@ -1,7 +1,6 @@
 require 'sinatra'
 require File.dirname(__FILE__)+'/lib/caesar_cipher'
 
-
 get "/" do
   erb :home
 end
