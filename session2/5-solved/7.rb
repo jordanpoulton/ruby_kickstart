@@ -104,3 +104,21 @@ working_array.each_with_index do |string, index|
 end
 output
 end
+
+#Phil
+def alternate_words sentence
+  
+  sentence = sentence.gsub('.', ' ').gsub('?', ' ').gsub(';', ' ').gsub(',', ' ').gsub('-', ' ').gsub('(', ' ').gsub(')', ' ')
+  sentenceArray = sentence.split " "
+  
+  returnArray = []
+  
+  sentenceArray.each_with_index do |word, index|
+    if index.even?
+      returnArray << word
+    end
+  end
+  
+  returnArray
+  
+end

@@ -85,3 +85,17 @@ def got_three?(array)
   output
 end
 
+#Phil
+def got_three? elements
+
+  i = 0
+  while i < elements.length
+    if elements[i] == elements[i + 1] && elements[i + 1] == elements[i + 2]
+      return true
+    else
+      i = i + 1
+    end
+  end
+  return false
+
+end

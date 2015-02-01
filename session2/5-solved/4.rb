@@ -86,3 +86,14 @@ end
 output.sort
 end
 
+#Phil
+def get_squares numbersArray
+  squaresArray = []
+  numbersArray.each do |element|
+    if numbersArray.include? (element * element)
+      squaresArray << element
+    end
+  end
+    squaresArray.sort
+end
+

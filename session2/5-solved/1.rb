@@ -122,3 +122,14 @@ def sum_difference_product
   
 end
 
+#Phil
+def sum_difference_product
+  input = gets.chomp
+  inputArray = input.split " "
+  a = inputArray[0].to_i
+  b = inputArray[1].to_i
+  puts (a + b).to_s
+  puts (a - b).to_s
+  puts (a * b).to_s
+end
+
