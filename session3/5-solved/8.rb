@@ -50,3 +50,24 @@ class Person
     @initializer.call self
   end
 end
+
+#================
+#Paulf
+class Person
+
+  attr_accessor :name, :age, :quote
+
+  def initialize(options=Hash.new, &initializer)
+    @name = options[:name]
+    self.age = options[:age]
+    @quote = options[:quote]
+
+    @initializer = initializer
+    initializer.call self if initializer
+  end
+
+  def reinit
+    @initializer.call self
+  end
+
+end
