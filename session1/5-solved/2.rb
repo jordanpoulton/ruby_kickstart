@@ -132,3 +132,12 @@ def arithmetic2(a, b)
 		return b / 2.0
 	end
 end
+
+#Kate Beavis
+def arithmetic2(a, b)
+	if a < b
+		return a / 2.0
+	else
+		return b / 2.0
+end
+end

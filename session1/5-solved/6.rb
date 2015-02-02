@@ -274,3 +274,16 @@ def odds_and_evens(string, return_odds)
   end
 result
 end
+
+# Kate Beavis
+def odds_and_evens(string, return_odds)
+
+answer = ""
+
+string.length.times do |item|
+  next if return_odds && item.even?
+  next if !return_odds && item.odd?
+  answer << string[item]
+end
+answer
+end

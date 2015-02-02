@@ -197,3 +197,13 @@ def pirates_say_arrrrrrrrr(string)
  str
 end
 
+# Kate Beavis
+def pirates_say_arrrrrrrrr(string)
+  str = String.new
+  (string.length - 1).times do |char|
+    if string[char] == "r" || string[char] == "R"
+      str << string[char+1]
+    end
+  end
+  str
+end
