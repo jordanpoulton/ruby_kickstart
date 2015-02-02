@@ -127,3 +127,19 @@ def prime_chars? stringsArray
     return true
   end
 end
+
+#Costas
+def prime_chars?(array)
+
+  total = array.join.length
+
+  if total < 2
+    return false
+  end
+
+  (2...total).each do |x|
+    if total % x == 0
+      return false
+    end
+  end
+end
