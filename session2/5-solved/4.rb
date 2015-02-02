@@ -61,3 +61,8 @@ def get_squares(array)
   end
   sorted_array.sort
 end
+
+# Kate Beavis
+def get_squares(num)
+	num.sort.select { |i|  num.include? i * i }
+end

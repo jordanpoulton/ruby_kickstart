@@ -93,3 +93,13 @@ def sum_difference_product
 
   print result
 end
+
+# Kate Beavis
+def sum_difference_product
+  a, b = gets.split.map { |i| i.to_i }
+
+  puts (a + b)
+  puts (a - b)
+  puts (a * b)
+  
+end

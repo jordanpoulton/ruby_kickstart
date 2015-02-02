@@ -49,3 +49,8 @@ def mod_three(array)
   end
   new_array.compact
 end
+
+# Kate Beavis
+def mod_three(array)
+	array.select { |x| x % 3 != 0}.map { |x| x % 3 }
+end

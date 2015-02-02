@@ -84,3 +84,14 @@ def alternate_words(string)
 
   final_array
 end
+
+# Kate Beavis
+def alternate_words(string)
+    str = string.gsub(/[! @ $ # % ^ & * ( ) \-\ = _ + \[\]:;,.\/<>?\|]/," ")
+    array = str.split(" ")
+    alternate = []
+    array.each_slice(2) do |word1, word2|
+      alternate << word1
+    end
+  alternate
+end

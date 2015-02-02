@@ -112,3 +112,15 @@ def hi_hi_goodbye
     end
   end
 end
+
+# Kate Beavis
+def hi_hi_goodbye
+  
+  puts "Enter a number"
+
+  while reply = gets
+  print "hi " * reply.to_i
+  break if reply == "bye"
+end
+puts "Goodbye"
+end

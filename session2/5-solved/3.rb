@@ -129,3 +129,14 @@ class String
     new_array.join
   end
 end
+
+# Kate Beavis
+class String
+  def every_other_char
+    str = ""
+    each_char.with_index do |char, position|
+    str << char if position.even?
+  end
+  str
+end
+end
