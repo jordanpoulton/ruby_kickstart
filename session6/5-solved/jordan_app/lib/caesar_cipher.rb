@@ -20,20 +20,10 @@ module CaesarCipher
   end
 
   def self.encrypt string
-    output = ""
-    string.chars.each do |char|
-      output << char unless ENCRYPT_HASH[char]
-      output << ENCRYPT_HASH[char] if ENCRYPT_HASH[char]
-    end
-    output
+    string.chars.map { |char| ENCRYPT_HASH[char] ? ENCRYPT_HASH[char] : char }.join
   end
 
   def self.decrypt string
-    output = ""
-    string.chars.each do |char|
-      output << char unless DECRYPT_HASH[char]
-      output << DECRYPT_HASH[char] if DECRYPT_HASH[char]
-    end
-    output
+    string.chars.map {|char| DECRYPT_HASH[char] ? DECRYPT_HASH[char] : char}.join
   end
 end

@@ -12,7 +12,7 @@ require 'erb'
 
 # =====  <% Syntax: Control Structures %>  =====
 # there are, amazingly enough, only two types of syntax for ERB (unless you want to get complicated -- which, you don't)
-# 
+#
 # Control structures are embedded within <% %> tags. Inside of them, you place regular Ruby. It gets evaluated like normal
 def get_result(str) ERB.new( str , 0 , '>' ).result end
 get_result "123<% 10.times do %>4<% end %>567"  # => "1234444444444567"
