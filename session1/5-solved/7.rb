@@ -81,6 +81,18 @@ def pirates_say_arrrrrrrrr(string)
   return_letter
 end
 
+<<<<<<< HEAD
+#Tommaso
+def pirates_say_arrrrrrrrr(string)
+  string_ary = ''
+  next_char = false
+  string.size.times do |i|
+    string_ary << string[i] if next_char
+    next_char = string[i] == 'r' || string[i] == 'R'
+ end
+ string_ary
+end
+=======
 
 #solved by loris
 def pirates_say_arrrrrrrrr(string)
@@ -221,3 +233,4 @@ string.length.times do |i|
 end
 return_string
 end
+>>>>>>> 9ae5d6e3790ec3366349ec4d1c5e0dbc8a7d7a7d

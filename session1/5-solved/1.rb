@@ -92,3 +92,8 @@ def arithmetic1(n)
   n*5-20
 end
 
+#Tommaso
+def arithmetic1(n)
+(n * 5) - 20
+end
+

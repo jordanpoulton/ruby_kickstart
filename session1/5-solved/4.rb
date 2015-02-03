@@ -103,6 +103,30 @@ def grade(num_books, reads_books)
 
 end
 
+<<<<<<< HEAD
+      
+#Tommaso
+def grade(num_books, has_read_books)
+  if has_read_books == true
+    if num_books < 10 
+      "C"
+    elsif num_books <= 20 
+      "B"
+    else num_books > 20 
+      "A"
+    end
+  
+  else
+    if num_books < 10 
+      "D"
+    elsif num_books <= 20 
+      "C"
+    else num_books > 20 
+      "B"
+    end
+  end
+end      
+=======
 #solved by loris
 def grade(num_books, reads_books)
   grades = ['A','B', 'C', 'D']
@@ -317,3 +341,4 @@ def grade(num_books, has_read_books)
 
 end
 
+>>>>>>> 9ae5d6e3790ec3366349ec4d1c5e0dbc8a7d7a7d
