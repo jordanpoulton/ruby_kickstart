@@ -8,5 +8,3 @@
 def odds_and_evens(string, return_odds)
 
 end
-
-#This can definitely be refactored!!

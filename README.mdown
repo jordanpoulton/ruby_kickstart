@@ -3,7 +3,7 @@ Welcome to RubyKickstart!
 
 **RubyKickstart is an interactive guide to learning the Ruby programming language.**
 
-**Disclaimer - this is a shameless continuation of the original Ruby Kickstart by Josh Peek. I have no intention of reinventing the wheel, and I gladly stand on the shoulder of giants :)
+**Disclaimer - this is a shameless continuation of the original Ruby Kickstart by Josh Cheek. I have no intention of reinventing the wheel, and I gladly stand on the shoulder of giants :)
 
 How you should use this
 ============
@@ -34,7 +34,7 @@ The course consists of six sessions, all of which have common features:
 
   Challenges are taken from a few different places. Several are taken from different books, including the third edition of Absolute Java by Walter Savitch, and one was taken from Learn to Program by Chris Pine, a book to teach programming to absolute beginners, using Ruby.
 
-  The rest were spawned out of the brain of Mr Peek himsef.
+  The rest were spawned out of the brain of Mr Cheek himsef.
 
   Don't forget to run "rack session_number:challenge_number" as you go along for feedback on whether your solutions are correct, and once you've got all your tests passing, you can compare your solution to the solutions in the 'solved' section (next)
 

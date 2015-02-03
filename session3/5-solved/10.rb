@@ -13,3 +13,17 @@ def pathify(paths=Hash.new)
   end
   to_return
 end
+
+#Jordan
+def pathify(path_list)
+  return path_list.map {|e| "/#{e}"} if path_list.is_a? Array
+
+  output = []
+  path_list.each do |directory, contents|
+    path = "/#{directory}"
+    recursive_group = pathify contents
+    recursive_group.each{|array_item| output << (path + array_item)}
+  end
+  output
+end
+#==========

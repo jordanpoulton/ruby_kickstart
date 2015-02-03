@@ -1,4 +1,4 @@
-#Josh Peek
+#Josh Cheek
 def arithmetic1(n)
   n*5-20
 end
@@ -24,9 +24,72 @@ def arithmetic1(n)
 end
 #============
 
+
 #Sebastien
 def arithmetic1(n)
- 	n * 5 - 20 
+ 	n * 5 - 20
+end
+
+#Solved by loris
+def arithmetic1(n)
+  result = (n * 5) - 20
+  return result
+end
+
+#Phil
+def arithmetic1(n)
+  (n * 5) - 20
+end
+
+#Yannick
+def arithmetic1(n)
+  (n * 5) - 20
+end
+
+#kevin lanzon
+def arithmetic1(n)
+  return (n * 5) - 20
+end
+
+# Tom Coakes
+def arithmetic1(n)
+  (n * 5) - 20
+end
+
+# Sean Haughton
+def arithmetic1(n)
+  return (n * 5) - 20
+end
+
+# Gabe Arafa
+def arithmetic1(n)
+  n * 5 - 20
+end
+
+# Rizwan Ali
+def arithmetic1(n)
+  n * 5 -20
+end
+
+
+#Guido
+def arithmetic1(n)
+	return (n * 5) - 20
+end
+
+#Alex Parkinson
+def arithmetic1(n)
+  (n * 5) - 20
+end
+
+# Carrie Christenson
+def arithmetic1(n)
+	n * 5 -20
+end
+
+#Chris Ward
+def arithmetic1(n)
+  n*5-20
 end
 
 #Tommaso

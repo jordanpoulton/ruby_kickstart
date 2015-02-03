@@ -1,3 +1,7 @@
+# Befor tackling this problem, go and digest the lecture on RECURSION:
+
+# https://vimeo.com/24716767
+
 # For this problem, you will need to know how to use a linked list.
 #
 # A linked list is like a train, each car is connected to the car behind it. Then you just
@@ -38,3 +42,6 @@
 # middle head                        # => 3
 # head = {:data => 6, :next => head}
 # middle head                        # => 3
+
+
+

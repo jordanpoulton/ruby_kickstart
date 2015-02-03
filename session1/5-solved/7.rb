@@ -1,3 +1,16 @@
+#paul fitz
+def pirates_say_arrrrrrrrr(string)
+	answer = ""
+	number = string.length - 1
+	string.length.times do |i|
+		 string[i]
+		 if string[i] == "r" || string [i] == "R"
+		 	answer << string[i + 1]
+		 end
+		end
+	answer
+end
+
 def pirates_say_arrrrrrrrr(string)
   to_return = ""
   add_next = false
@@ -8,6 +21,16 @@ def pirates_say_arrrrrrrrr(string)
   end
   to_return
 end
+
+#Jordan
+def pirates_say_arrrrrrrrr(string)
+  output = String.new
+  string.chars.each_with_index do |letter, index|
+    output << string[index+1].to_s if letter == "r" || letter == "R"
+  end
+  output
+end
+
 
 #solved by meads
 def pirates_say_arrrrrrrrr(string)
@@ -21,6 +44,7 @@ def pirates_say_arrrrrrrrr(string)
 	result
 end
 #================================
+
 
 #paul fitz
 def pirates_say_arrrrrrrrr(string)
@@ -40,9 +64,10 @@ def pirates_say_arrrrrrrrr(string)
   (string.length - 1).times do |index|
     if string[index] == "r" || string[index] == "R"
     x << string[index+1]
+    end
   end
-end
   x
+end
 
 #Sebastien
 def pirates_say_arrrrrrrrr(string)
@@ -56,6 +81,7 @@ def pirates_say_arrrrrrrrr(string)
   return_letter
 end
 
+<<<<<<< HEAD
 #Tommaso
 def pirates_say_arrrrrrrrr(string)
   string_ary = ''
@@ -66,3 +92,145 @@ def pirates_say_arrrrrrrrr(string)
  end
  string_ary
 end
+=======
+
+#solved by loris
+def pirates_say_arrrrrrrrr(string)
+  newString = String.new
+  stringArray = string.split(//)
+  s_length = stringArray.length
+  stringArray.each_with_index do |x, y|
+    if x == "r" || "R" && y!= s_length-1
+    newString << stringArray[y+1]
+    end
+  end
+  return newString
+
+#Phil
+def pirates_say_arrrrrrrrr(string)
+  stringArray = string.split ""
+  returnString = ""
+
+  i = 0
+  while i < stringArray.length - 1
+    if stringArray[i] == "r" || stringArray[i] == "R"
+      returnString << stringArray[i + 1]
+    end
+    i = i + 1
+  end
+    returnString
+end
+
+#Yannick
+def pirates_say_arrrrrrrrr(string)
+  answer = ""
+  cycles = string.size - 1
+  cycles.times do |x|
+    if string[x] == "r" || string[x] == "R"
+    answer << string[x + 1]
+    end
+  end
+answer
+end
+
+#kevin lanzon
+def pirates_say_arrrrrrrrr(string)
+  character = String.new
+  string.length.times do |letter|
+    if /[rR]/.match(string[letter]) then # Found match method. Matches characters enclosed in /[]/
+      character << string[letter + 1] unless string[letter + 1] == nil # Unless counters the if statement
+    end
+  end
+  character
+end
+
+# Tom Coakes
+def pirates_say_arrrrrrrrr(string)
+  new_string = ""
+  r_count = string.downcase.count('r')
+  nil_index = (string.length)
+  index = 0
+
+  (r_count).times do
+    index = string.downcase.index("r", index) + 1
+    break if index == nil_index
+    new_string << string[index]
+  end
+
+  return new_string
+end
+
+# Sean Haughton
+def pirates_say_arrrrrrrrr(string)
+  new_string = String.new
+  string.chars.each_with_index do |letter, index|
+
+      new_string << string[index+1].to_s if letter == "r" || letter == "R"
+      end
+  new_string
+end
+
+# Gabe
+def pirates_say_arrrrrrrrr(string)
+  letters_array = string.split(//)
+  return_string = ""
+  letters_array.each_with_index do |letter, index|
+    next if index == string.length - 1
+    return_string << string[index + 1] if letter.downcase == 'r'
+  end
+  return_string
+end
+
+#solved by Riz
+
+def pirates_say_arrrrrrrrr(string)
+  newString = ""
+  index = 0
+  add_next = false
+  string = string.split("").each do |letter|
+    if letter == "r" || letter =="R"
+      if index + 1 < string.size
+        add_next= index + 1
+        newString << string[add_next]
+      end
+    end
+  end
+end
+
+#Guido
+
+def pirates_say_arrrrrrrrr(string)
+  str = ""
+  string.length.times do |i|
+	  if string[i] == "R" || string[i] == "r"
+		  str << string[i + 1].to_s
+          end
+  end
+ str
+end
+
+#Carrie Christenson
+def pirates_say_arrrrrrrrr(string)
+ 	answer = String.new
+ 	i = 0
+ 	while i < string.length-1
+ 		if string[i] == "r" || string[i] == "R"
+ 			answer << string[i+1]
+ 		end
+ 		i = i+1
+ 	end
+return answer
+end
+
+#Chris Ward
+
+def pirates_say_arrrrrrrrr(string)
+return_string = ""
+string.length.times do |i|
+  if string[i] == "r" || string[i]== "R"
+    return_string << string[i+1].to_s
+  end
+end
+return_string
+end
+>>>>>>> 9ae5d6e3790ec3366349ec4d1c5e0dbc8a7d7a7d

@@ -24,3 +24,31 @@ end
 def same_ends(n, *params)
   params[0, n] == params[-n, n]
 end
+
+#Jordan
+def problem_14(*array)
+  problem = array.pop[:problem] if array.last.is_a? Hash
+  problem ||= :count_clumps
+
+  problem == :count_clumps ? count_clumps(*array) : same_ends(*array)
+end
+
+def same_ends(n, *array)
+  array[0,n] == array[-n, n]
+end
+
+
+def count_clumps(*array)
+  clumps = 0
+  flag = 0
+  array.each_index do |index|
+    if(array[index] == array[index+1])
+      flag += 1
+    else
+      clumps +=1 if flag > 0
+      flag = 0
+    end
+  end
+  clumps
+end
+#========

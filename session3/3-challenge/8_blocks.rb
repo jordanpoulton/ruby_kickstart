@@ -26,9 +26,10 @@
 
 
 class Person
+
   attr_accessor :name
 
-  def initialize(&initializer)
+  def initialize( &initializer )
     @initializer = initializer
     initializer.call self
   end
@@ -36,4 +37,5 @@ class Person
   def reinit
     @initializer.call self
   end
+
 end
