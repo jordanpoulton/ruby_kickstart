@@ -30,3 +30,9 @@ end
 def reverse_map(*args, &block)
     args.reverse.map(&block)
 end
+
+# Chris Ward
+
+def reverse_map(*input_array,&input_block)
+	input_array.reverse.map(&input_block)
+end
