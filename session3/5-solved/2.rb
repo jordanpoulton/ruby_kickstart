@@ -85,3 +85,19 @@ def staircase(int)
     end
   end
 end
+
+#Chris Ward
+
+def staircase(num)
+	output = {}
+	(1..num).each do |i|
+		  if i.odd?
+		  	array = []
+		  	(1..i).each do |x|
+		  		array << x if x.even?
+		  	end
+		  	output[i] = array
+		  end
+	end
+output
+end
