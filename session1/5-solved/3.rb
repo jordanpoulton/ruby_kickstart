@@ -51,6 +51,17 @@ def ten_twenty(n)
   end
 end
 
+<<<<<<< HEAD
+#Tommaso
+def ten_twenty(n)
+  if n % 2 == 0
+    10
+  else 
+    20
+  end
+end
+
+=======
 #Phil
 def ten_twenty(n)
   if n.even?
@@ -141,3 +152,4 @@ end
 def ten_twenty(n)
   10 : 20 if n.even?
 end
+>>>>>>> 9ae5d6e3790ec3366349ec4d1c5e0dbc8a7d7a7d

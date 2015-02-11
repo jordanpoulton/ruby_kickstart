@@ -115,6 +115,18 @@ def arithmetic2(a, b)
 end
 
 
+<<<<<<< HEAD
+#Tommaso
+def arithmetic2(a, b)
+  if a < b
+   a / 2.0
+  else b < a
+   b / 2.0
+  end
+end
+
+
+=======
 #Guido
 
 def arithmetic2(a, b)
@@ -124,6 +136,7 @@ def arithmetic2(a, b)
 		return (b / 2.0)
 	end
 end
+>>>>>>> 9ae5d6e3790ec3366349ec4d1c5e0dbc8a7d7a7d
 
 #Alex Parkinson
 def arithmetic2(a, b)
