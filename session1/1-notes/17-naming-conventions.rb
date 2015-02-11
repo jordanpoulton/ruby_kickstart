@@ -6,8 +6,8 @@ local_variable = nil
 
 # Constants are like variables, but you're telling the world that the value should not change.
 # Any variable that starts with a capital letter is a constant.
-# Use CamelCase with constants.
-Constant = nil
+# Use CAPS with constants.
+CONSTANT = nil
 
 
 # Instance variables are variables that belong to an object rather than a scope.
@@ -19,11 +19,11 @@ Constant = nil
 # Remember when I said methods were their own little worlds? I lied.
 # Constants can be seen by anything defined in their scope.
 
-MyConstant  = 12
+MYCONSTANT  = 12
 my_variable = 13
 def example
   begin
-    MyConstant        # => 12
+    MYCONSTANT        # => 12
     my_variable       # =>
   rescue => exception
     exception         # => #<NameError: undefined local variable or method `my_variable' for main:Object>
