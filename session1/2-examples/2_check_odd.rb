@@ -12,11 +12,18 @@ end       # If you're exiting because something went wrong, pass a different num
 
 # Unix is too dumb to know the argument is a number, so it passes it in as text.
 # We'll have to turn it into a number ourselves with to_i (what if the user didn't pass a number?)
-number = ARGV.first.to_i
-
-if number.odd?
-  puts "Yes, #{number} is odd"
+number = ARGV.first
+#Josue: suggested as non-numbers are considered as '0' once transformed into integer
+if number =~ /[\D]/
+	puts "The value entered is not a number"
 else
-  puts "No, #{number} is not odd"
+	number = ARGV.first.to_i
+
+	if number.odd?
+	  puts "Yes, #{number} is odd"
+	else
+	  puts "No, #{number} is not odd"
+	end
 end
+
 
