@@ -103,3 +103,10 @@ def add_more_ruby(string)
 end
 
 >>>>>>> 9ae5d6e3790ec3366349ec4d1c5e0dbc8a7d7a7d
+
+#Josue
+def add_more_ruby(string)
+  string.gsub(/sad/, 'happy').gsub(/Sad/, 'Happy')
+end
+
+

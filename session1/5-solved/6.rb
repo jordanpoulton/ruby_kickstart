@@ -328,3 +328,17 @@ new_string
 
 >>>>>>> 9ae5d6e3790ec3366349ec4d1c5e0dbc8a7d7a7d
 end
+
+#Josue
+def odds_and_evens(string, return_odds)
+  a = string.split('')
+
+  if return_odds == true
+    result = a.values_at(* a.each_index.select {|num| num.odd?})
+    result.join
+  else
+    result = a.values_at(* a.each_index.select {|num| num.even?})
+    result.join
+  end
+end
+
