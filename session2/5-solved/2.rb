@@ -153,3 +153,19 @@ def hi_hi_goodbye
   end
   puts "goodbye"
 end
+
+#Josue
+def hi_hi_goodbye
+  puts "Please enter a number"
+  number = gets.chomp
+
+  while number != "bye"
+    puts "hi " * number.to_i
+    number = gets.chomp
+  end
+
+  puts "goodbye"
+end
+
+
+
