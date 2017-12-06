@@ -97,3 +97,14 @@ def get_squares numbersArray
     squaresArray.sort
 end
 
+#Josue
+def get_squares(numbers)
+  result = []
+  numbers.each do |num|
+    result << num if numbers.include? num * num
+  end
+  result.sort
+end
+
+
+

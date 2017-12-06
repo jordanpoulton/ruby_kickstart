@@ -74,3 +74,14 @@ def mod_three numbersArray
   end
   remainderArray
 end
+
+#Josue
+def mod_three(numbers)
+  result = numbers.map do |n|
+    n % 3 if n % 3 != 0
+  end
+  result.compact #we remove the 'nil/s' from the array
+end
+
+
+
