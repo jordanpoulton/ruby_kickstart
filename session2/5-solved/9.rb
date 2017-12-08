@@ -141,3 +141,18 @@ def deaf_grandma
     response = gets.chomp
   end
 end
+
+#Josue
+def deaf_grandma
+  while sentence = gets.chomp
+    exit if sentence == 'BYE'
+    
+    case sentence
+    when sentence.upcase
+      puts "NO, NOT SINCE 1938!"
+    else
+      puts "HUH?! SPEAK UP, SONNY!"
+    end
+  end
+end
+
