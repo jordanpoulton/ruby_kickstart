@@ -593,3 +593,86 @@ class BeerSong
   end
     
 end
+
+#Josue
+class BeerSong
+
+  NUMBERS = {
+      1 => "one",
+      2 => "two",
+      3 => "three",
+      4 => 'four',
+      5 => "five",
+      6 => "six",
+      7 => "seven",
+      8 => "eight",
+      9 => "nine",
+      10 => "Ten"
+  }
+
+  TEENS = {
+      11 => "Eleven",
+      12 => "Twelve",
+      13 => "Thirteen",
+      14 => "Fourteen",
+      15 => "Fifteen",
+      16 => "Sixteen",
+      17 => "Seventeen",
+      18 => "Eighteen",
+      19 => "Nineteen",
+      20 => "Twenty"
+  }
+
+  TENS = {
+      0 => "Zero",
+      10 => "Ten",
+      20 => "Twenty",
+      30 => "Thirty",
+      40 => "Forty",
+      50 => "Fifty",
+      60 => "Sixty",
+      70 => "Seventy",
+      80 => "Eighty",
+      90 => "Ninety"
+  }
+
+  def initialize(num_beers)
+    @num_beers = num_beers
+    @num_beers = 0 if num_beers < 0
+    @num_beers = 99 if num_beers > 99
+  end
+
+  def translate(n)
+    return TENS[0] if n == 0
+
+    if n > 0 && n < 11
+      NUMBERS[n]
+    elsif n > 10 && n < 21
+      TEENS[n]
+    elsif n % 10 == 0
+      TENS[n]
+    else
+      return "#{translate ((n/10)*10)}-#{translate n%10}"
+      end
+  end
+
+  attr_accessor :num_beers
+
+  def print_song
+    num_beers.downto 1 do |num|
+      stanza(num)
+    end
+  end
+
+  def bottle_num(n)
+    translate(n) == "one" ? "bottle" : "bottles"
+  end
+
+  def stanza(n)
+    puts "#{translate(n).capitalize} #{bottle_num(n)} of beer on the wall,"
+    puts "#{translate(n).capitalize} #{bottle_num(n)} of beer,"
+    puts "Take one down, pass it around,"
+    puts "#{translate(n-1).capitalize} #{bottle_num(n-1)} of beer on the wall."
+  end
+end
+

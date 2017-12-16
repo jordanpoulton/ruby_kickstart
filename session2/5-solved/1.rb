@@ -133,3 +133,18 @@ def sum_difference_product
   puts (a * b).to_s
 end
 
+#Josue
+def sum_difference_product
+  puts "Please enter two numbers separated by a space"
+  numbers = gets
+
+  a_numbers = numbers.split(" ")
+  i1 = a_numbers[0].to_i
+  i2 = a_numbers[1].to_i
+
+  puts i1 + i2
+  puts i1 - i2
+  puts i1 * i2 
+end
+
+

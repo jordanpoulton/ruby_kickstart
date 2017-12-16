@@ -122,3 +122,15 @@ def alternate_words sentence
   returnArray
   
 end
+
+#Josue
+def alternate_words(sentence)
+  #first, we remove any chars that are not: words, spaces or '’
+  just_letters = sentence.gsub(/[^\w\s'’]/, " ")
+  a = just_letters.split(" ") #then, we get an array of strings
+  
+  a.values_at(* a.each_index.select { |word| word.even?}) #every other index (even)
+end
+
+
+

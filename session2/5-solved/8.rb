@@ -99,3 +99,15 @@ def got_three? elements
   return false
 
 end
+
+#Josue
+def got_three?(array)
+  result = false
+  array.each_with_index do |elem, i|
+    if elem == array[i+1] && elem == array[i+2]
+      return true
+    end
+  end
+  result
+end
+

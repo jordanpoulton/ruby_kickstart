@@ -165,3 +165,10 @@ def arithmetic2(a, b)
 		b/2.to_f
 	end
 end
+
+#Josue
+def arithmetic2(a, b)
+	a > b ? b.to_f / 2 : a.to_f / 2
+end
+
+

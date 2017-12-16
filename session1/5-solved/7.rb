@@ -234,3 +234,21 @@ end
 return_string
 end
 >>>>>>> 9ae5d6e3790ec3366349ec4d1c5e0dbc8a7d7a7d
+
+#Josue
+def pirates_say_arrrrrrrrr(string)
+  a = []
+  result = ''
+
+  string.length.times do |index|
+    char = string[index]
+    next_char = string[index + 1] || ''
+
+    a.push(next_char) if char == "r" || char == "R"
+    result = a.join("")
+  end
+
+  result
+end
+
+

@@ -164,3 +164,17 @@ class String
     output
   end
 end
+
+#Josue
+class String
+  def every_other_char
+    a = self.split("")  # We store every character of string into an array
+    result = [] # We declare an empty array to store even values (every other char)
+
+    # We select all the values at array "a" that have an even index position
+    result = a.values_at(* a.each_index.select {|position| position.even?})
+    result.join("") # Then we get the string with correct values to pass the tests
+  end
+end
+
+

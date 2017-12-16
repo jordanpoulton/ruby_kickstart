@@ -143,3 +143,20 @@ def prime_chars?(array)
     end
   end
 end
+
+#Josue
+def prime_chars?(array)
+  size = array.join.length
+
+  return false if size < 2
+
+  #a prime will only give '0' as remainder when divided by '1' or itself
+  #so we exclude both '1' and the number we iterate through
+  (2...size).each do |num|
+    if size % num == 0
+      return false
+    end
+  end
+  true
+end
+
